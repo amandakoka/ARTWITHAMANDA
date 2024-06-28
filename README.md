@@ -348,3 +348,20 @@ The development of Art with Amanda was driven by several key factors:
 5. **Educational Milestone**: This project represents a significant milestone in my web development education, demonstrating the practical application of skills learned during my Level 5 Diploma in Web Development with Code Institute.
 
 ## Features
+
+## Technologies Used
+
+### Languages
+- **Python**: Used for the backend development.
+- **HTML/CSS**: Used for frontend templates and styling.
+- **JavaScript**: Used for frontend interactivity.
+
+### Frameworks & Tools
+- **Django**: Python web framework used for building the backend and handling server-side logic.
+- **Bootstrap**: Frontend framework for designing responsive and mobile-first websites.
+- **Stripe API**: Used for processing payments securely.
+- **Figma**: Used for creating wireframes and designing the user interface.
+- **Git**: Version control system used for tracking changes in the project and collaborating with others.
+- **GitHub**: Used for hosting the project repository and deployment using GitHub Pages.
+- **Heroku**: Cloud platform used for deployment of the Django application.
+- **VS Code**: Integrated development environment used for coding and project management.

@@ -230,3 +230,44 @@ The shopping bag page wireframes were designed to provide users with a clear ove
 ### Next Steps
 
 With the wireframes finalized, I used them as a blueprint during the development phase to ensure the website aligns with the chosen layout and effectively meets user needs.
+
+## Colour Scheme
+
+In developing the Art with Amanda website, I prioritized a modern and simplistic design to ensure that my artwork remains the focal point. Based on user feedback, I selected a colour palette consisting of different shades of white and black. This neutral colour scheme helps to create a clean, elegant, and professional look that doesn't distract from the art photos.
+
+<details>
+<summary>Colour Palette</summary>
+<br>
+<img src="documentation/colourpalette.png">
+</details>
+
+The following is an overview of how the colour scheme is applied across different sections of the website:
+
+- **Backgrounds**: The primary background colour is white, providing a bright and clean canvas for the artwork.
+- **Text**: The main text colour is black, and white on dark backgrounds, ensuring high readability and contrast.
+- **Borders and Dividers**: A light grey is used for subtle borders and dividers, adding structure to the layout without drawing attention away from the artwork.
+- **Buttons and Links**: Buttons and interactive elements are styled in a black shade to stand out and be easily identifiable.
+
+### User Feedback Integration
+
+The decision to use a simple and neutral colour scheme was directly influenced by user feedback. Through preliminary discussions and Instagram polls, users expressed a preference for a minimalist design that highlights the artwork rather than the website itself. By adopting this feedback, the final colour scheme enhances the user experience and ensures that the artwork remains the central focus of the site.
+
+By maintaining a consistent and simplistic colour scheme, the website provides a cohesive and enjoyable user experience that directs attention to the artwork while ensuring readability and ease of navigation.
+
+## Typography
+
+The typography for the Art with Amanda website is inspired by my logo, which features the Arapey font. To complement Arapey, I researched fonts that pair well with it and discovered Raleway. This combination was recommended by a resource on the best free Google Fonts, which you can find [here](https://daveyandkrista.com/best-free-google-fonts/#:~:text=Arapey%20would%20look%20great%20in,serif%20like%20Questrial%20or%20Raleway.).
+
+### Font Choices
+
+- **Arapey**: This elegant serif font is used for the headings. Its classic and sophisticated style adds a touch of refinement to the website, making it ideal for drawing attention to key areas like titles and section headers.
+- **Raleway**: This clean and modern sans-serif font is used for body text. Raleway’s readability and contemporary appearance provide a nice contrast to Arapey, ensuring that the content is easy to read and visually appealing.
+
+### Application
+
+The consistent use of these two fonts helps to create a cohesive and elegant look throughout the website. Here is how they are applied:
+
+- **Headings (Arapey)**: All major headings, including section titles use the Arapey font. This helps to create a hierarchy and guide the user’s attention to important information.
+- **Body Text (Raleway)**: All body text, including descriptions and general content, uses the Raleway font. This ensures that the text is clear and easy to read, contributing to a pleasant user experience.
+
+By carefully selecting and pairing these fonts, the website achieves a harmonious visual experience that enhances readability while maintaining an elegant and professional appearance. This thoughtful typography choice reflects the overall aesthetic of the Art with Amanda brand, balancing artistic elegance with modern design principles.

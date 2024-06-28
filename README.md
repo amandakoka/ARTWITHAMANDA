@@ -367,5 +367,8 @@ The development of Art with Amanda was driven by several key factors:
 - **VS Code**: Integrated development environment used for coding and project management.
 
 # Testing
+
+All testing details, including the strategy, test cases, and outcomes, are documented in the [TESTING.md](TESTING.md) file. Please refer to this file for a comprehensive overview of the testing process and results.
+
 # Deployment 
 # Credits 

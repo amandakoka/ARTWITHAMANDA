@@ -168,3 +168,65 @@ User feedback remains an important part of Art with Amanda's ongoing development
 | 24 | Store Owner | Delete a product | remove items that are no longer for sale. |
 
 ## Database schema 
+
+## Wireframes
+In the initial stages of designing Art with Amanda, I created rough sketches to visualize the layout and structure of the website. These sketches served as a blueprint for the final wireframes and helped shape the overall user experience. Below are the images of these sketches:
+- [Photo 1](documentation/Wireframes1/IMG_3139.jpg)
+- [Photo 2](documentation/Wireframes1/IMG_3140_2.jpg)
+- [Photo 3](documentation/Wireframes1/IMG_3141_2.jpg)
+- [Photo 4](documentation/Wireframes1/IMG_3142_2.jpg)
+
+### Final Wireframes
+
+After refining my initial sketches, I created detailed wireframes using Figma, a versatile and powerful design tool known for its collaborative features and ease of use. Figma allowed me to add images and create precise, polished representations of the website's layout. Below are the finalized wireframes:
+
+#### Home Page
+
+For the home page, I developed two different options and sought feedback from the Instagram community, as well as from family and friends, to determine which layout they preferred. The majority favored the first layout, so I decided to proceed with this design.
+
+- **Option 1**: [View Wireframe](documentation/FinalWireframes/wf1.png)
+- **Option 2**: [View Wireframe](documentation/FinalWireframes/wf2.png)
+- **Phone View**: [View Wireframe](documentation/FinalWireframes/homepagephone.png)
+- **Tablet View**: [View Wireframe](documentation/FinalWireframes/homepagetablet.png)
+
+#### Shop Page
+
+The shop page was designed to provide a seamless shopping experience across different devices. It features a clean layout that highlights the products, with easy filtering and sorting options to help users find what they are looking for quickly. The wireframes include detailed views for different devices:
+
+- **Desktop View**: [View Wireframe](documentation/FinalWireframes/Screenshot%202024-06-18%20at%2014.52.42.png)
+- **Phone View**: [View Wireframe](documentation/FinalWireframes/shoppagephone.png)
+- **Tablet View**: [View Wireframe](documentation/FinalWireframes/Screenshot%202024-06-18%20at%2014.56.13.png)
+
+#### Art Product Page
+
+The art product page showcases individual artworks with detailed descriptions and images. This page is designed to provide all the necessary information about each piece, including high-quality images, descriptions, quantity, and pricing. The wireframes demonstrate how these elements are organized for clarity and ease of use:
+
+- **Desktop View**: [View Wireframe](documentation/FinalWireframes/artfdetaildesktop.png)
+- **Phone View**: [View Wireframe](documentation/FinalWireframes/artdetailphone.png)
+
+#### Contact Page
+
+The contact page ensures users can easily reach out with inquiries or feedback. It includes a straightforward contact form, clear instructions, and additional contact information such as email and phone numbers. This page is designed to be user-friendly and accessible:
+
+- **Desktop View**: [View Wireframe](documentation/FinalWireframes/contactpagedesktop.png)
+
+#### Account/Login/Sign Up Page
+
+The account, login, and sign up pages were designed to streamline the user authentication process, ensuring a smooth and user-friendly experience. These wireframes include the following features:
+
+- **Account Page**: Allows users to view and update their personal information, manage their password, and view their order history.
+- **Login Page**: Provides a simple and secure interface for users to enter their credentials and access their accounts. It includes options for forgotten passwords and social media logins.
+- **Sign Up Page**: Offers a straightforward registration form for new users, with fields for necessary personal information and security features to protect user data.
+
+#### Shopping Bag Page
+
+The shopping bag page wireframes were designed to provide users with a clear overview of their selected items, allowing for easy modifications to quantities and facilitating a straightforward checkout process. Key features include:
+
+- **Item List**: Displays all selected items with thumbnails, names, prices, and quantity selectors.
+- **Total Price**: Shows a summary of the total cost.
+- **Checkout Button**: A prominent button that directs users to the secure checkout page.
+- **Remove Item Option**: Allows users to easily remove items from their shopping bag.
+
+### Next Steps
+
+With the wireframes finalized, I used them as a blueprint during the development phase to ensure the website aligns with the chosen layout and effectively meets user needs.

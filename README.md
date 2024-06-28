@@ -68,3 +68,68 @@ As a visitor to the Art with Amanda website, my goals are to:
 - **Enjoy a Seamless Experience**: Experience a responsive website that works well on different devices, ensuring a consistent and enjoyable browsing and shopping experience.
 
 By achieving these goals, users can explore and appreciate my artwork, make informed purchasing decisions, and potentially become patrons and supporters of my artistic journey.
+
+## User Feedback and Involvement
+
+### Feedback Collection
+
+Before the development of Art with Amanda began, user feedback was actively collected to ensure the website meets the needs and expectations of its target audience. Feedback was gathered through various channels, including:
+
+- **Preliminary Discussions**: Had discussions and gathered suggestions from art friends and family members to understand their preferences, behaviors, and needs as potential buyers and art enthusiasts.
+
+- **Instagram Community Feedback**: Posted questions and polls on my Instagram story (artwithamanda_) asking followers what they would like to see on an art selling website and gathered valuable feedback and suggestions.
+
+### Key Points from Feedback
+
+After collecting extensive feedback from both my Instagram community and preliminary discussions with friends and family, several key points emerged. Here are the questions I asked and a summary of the majority responses:
+
+1. **What do you want to see on an art seller's website?**
+    - High-quality images of the artwork
+    - Detailed descriptions and background stories of each piece
+    - Easy navigation and categorization of art pieces
+
+2. **What features do you find most helpful in making purchasing decisions?**
+    - Clear pricing and size information
+    - User reviews and ratings
+    - Secure and straightforward payment options
+
+3. **What design elements do you prefer in an art selling website?**
+    - Clean and minimalist design
+    - High-contrast colour schemes to highlight the artwork
+    - Intuitive layout with easy access to different sections
+
+4. **How important is mobile responsiveness to your browsing experience?**
+    - Extremely important: The majority of users emphasized the need for a mobile-friendly design
+    - Users expect a seamless experience across all devices
+
+#### Screenshots of Questions:
+- [Question 1 Screenshot](documentation/UserFeedbackQS/Q1.JPG)
+- [Question 2 Screenshot](documentation/UserFeedbackQS/Q2.JPG)
+- [Question 3 Screenshot](documentation/UserFeedbackQS/Q3.JPG)
+- [Question 4 Screenshot](documentation/UserFeedbackQS/Q4.JPG)
+
+### Poll Results
+
+Here are the results of the polls:
+
+- [Poll 1 Screenshot](documentation/UserFeedbackPolls/IMG_3129.PNG)
+- [Poll 2 Screenshot](documentation/UserFeedbackPolls/IMG_3130.jpg)
+- [Poll 3 Screenshot](documentation/UserFeedbackPolls/IMG_3131.jpg)
+- [Poll 4 Screenshot](documentation/UserFeedbackPolls/IMG_3132.jpg)
+- [Poll 5 Screenshot](documentation/UserFeedbackPolls/IMG_3133.jpg)
+
+### Incorporating Feedback
+
+User feedback played a crucial role in shaping the development of Art with Amanda. While I took into account the suggestions and preferences of my community, it's also important to maintain my own vision and personal style for the website. Key areas where feedback influenced decision-making include:
+
+- **Navigation Improvements**: Made adjustments to improve the clarity and intuitiveness of the website's navigation menus and category organization based on expected user feedback.
+
+- **Content Presentation**: Enhanced how information such as descriptions, dimensions, and materials used is displayed to users, ensuring a more informative and engaging experience.
+
+- **Mobile Responsiveness**: Optimized the website to ensure a seamless browsing and shopping experience across various devices and screen sizes.
+
+- **Design Choices**: For aspects like typography and colour schemes, I provided options that I liked and then asked the Instagram community to vote on their preferences. This collaborative approach ensured that the final design elements resonated well with the broader audience while still reflecting my artistic vision.
+
+### Continuous Improvement
+
+User feedback remains an important part of Art with Amanda's ongoing development and growth strategy. I will continue to actively seek suggestions and feedback from the audience throughout the development process, periodically asking for input on my Instagram and from friends and family. This approach ensures that the website evolves to meet the preferences and needs of its users, maintaining a user-centric approach to its development.

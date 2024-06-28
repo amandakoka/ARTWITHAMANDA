@@ -295,3 +295,40 @@ Here are some examples of the artwork photographs taken with the iPhone 12 for t
 - [Photo 3](documentation/Imagery/zoOQO.jpeg)
 
 These photographs demonstrate the clarity, detail, and colours captured with the iPhone 12, providing potential buyers with a true-to-life view of the artwork available for purchase.
+
+## Mockup
+For the Art with Amanda website, I created mockups to visualize the layout and design before development. These mockups were created using Wix, allowing me to experiment with different designs and user interfaces. Mockups help in understanding the overall structure of the website and provide a preview of how the final product will look and feel.
+
+### Mockup Tool Used
+
+I used **Wix** to create the mockups for Art with Amanda. Wix's drag-and-drop interface enabled me to design and customize various elements of the website easily.
+
+### Screens Mocked Up
+
+I created mockups for six key screens to explore different aspects of the website:
+
+1. **Home Page**: This includes the main landing area, about the artist, and navigation.
+
+2. **Artwork Listing Page**: A page showcasing all artworks with filtering and sorting options.
+
+3. **Artwork Detail Page**: Detailed view of a single artwork with description, price, and options to purchase.
+
+5. **Contact Page**: Form for visitors to reach out to Amanda for inquiries, commissions, or collaborations.
+
+6. **Shopping Cart and Checkout**: Layout for viewing items in the cart, adjusting quantities, and completing the purchase through Stripe integration.
+
+### Benefits of Mockups
+
+- **Visualization**: Mockups provide a visual representation of the website's structure and layout.
+- **Feedback**: They help gather feedback from stakeholders and potential users before development.
+- **Planning**: Mockups aid in planning the user experience (UX) and user interface (UI) design.
+
+### Example Mockup
+
+Below is an example of the mockup for the Home Page created using Wix:
+
+- [Home Page Mockup](documentation/Screenshot%202024-06-17%20at%2019.39.39.png)
+
+### Next Steps
+
+With the mockups finalized, I used them as a reference during the development phase to ensure the website aligns with the original vision and meets user needs effectively.

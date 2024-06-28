@@ -333,7 +333,7 @@ Below is an example of the mockup for the Home Page created using Wix:
 
 With the mockups finalized, I used them as a reference during the development phase to ensure the website aligns with the original vision and meets user needs effectively.
 
-## Rationale for Development
+# Rationale for Development
 
 The development of Art with Amanda was driven by several key factors:
 
@@ -347,9 +347,9 @@ The development of Art with Amanda was driven by several key factors:
 
 5. **Educational Milestone**: This project represents a significant milestone in my web development education, demonstrating the practical application of skills learned during my Level 5 Diploma in Web Development with Code Institute.
 
-## Features
+# Features
 
-## Technologies Used
+# Technologies Used
 
 ### Languages
 - **Python**: Used for the backend development.
@@ -365,3 +365,7 @@ The development of Art with Amanda was driven by several key factors:
 - **GitHub**: Used for hosting the project repository and deployment using GitHub Pages.
 - **Heroku**: Cloud platform used for deployment of the Django application.
 - **VS Code**: Integrated development environment used for coding and project management.
+
+# Testing
+# Deployment 
+# Credits 

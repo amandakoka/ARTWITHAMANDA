@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e66&_a96h%2u&cgggnaulib*p#@i_d=gc+zi#6-*#fhefv080-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-debug-amandakoka-artwithamand-4bavm5xwij7.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-amandakoka-artwithamand-4bavm5xwij7.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,10 @@ ROOT_URLCONF = 'art_with_amanda.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

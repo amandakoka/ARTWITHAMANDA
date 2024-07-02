@@ -43,9 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #555;
 }
 
-.about-me-section {
-    background-color: #e7e7e7 !important;
-}
+
 
 /* Footer Styles */
 .footer {
@@ -66,4 +64,25 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Arapey', serif;
     font-size: 1.5rem;
     color: #ffffff
+}
+
+.btn-dark {
+    background-color: #333232;
+    border-color: #333232;
+}
+
+.btn-dark:hover {
+    background-color: #444343;
+    border-color: #444343;
+}
+
+.about-me-section {
+    background-color: #e7e7e7 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+.about-me-content {
+    text-align: center;
 }

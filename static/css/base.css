@@ -42,4 +42,28 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-item:hover {
     background-color: #555;
 }
- 
+
+.about-me-section {
+    background-color: #e7e7e7 !important;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333232;
+}
+
+.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer .footer-logo-img {
+    height: 30px; 
+}
+
+.footer .footer-logo-text {
+    font-family: 'Arapey', serif;
+    font-size: 1.5rem;
+    color: #ffffff
+}

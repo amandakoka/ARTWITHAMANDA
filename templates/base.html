@@ -80,5 +80,19 @@
     {% block postloadjs %}
     {% endblock %}
 
+    {% block footer %}
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center d-flex justify-content-center align-items-center">
+          <a href="https://www.instagram.com/artwithamanda_/" target="_blank">
+            <i class="fab fa-instagram fa-2x text-white"></i>
+          </a>
+          <a class="footer-logo text-dark d-flex align-items-center" href="{% url 'home' %}">
+            <span class="footer-logo-text ml-2">ART WITH AMANDA</span>
+          </a>
+      </div>
+    </footer>
+{% endblock %}
+
+
   </body>
 </html>

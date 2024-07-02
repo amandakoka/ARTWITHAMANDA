@@ -20,5 +20,17 @@
     height: 20px;
 }
 
+.dropdown-menu {
+    background-color: #333232;
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    background-color: #555;
+}
+
 
 

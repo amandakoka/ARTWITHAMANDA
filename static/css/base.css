@@ -119,3 +119,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem; 
 }
 
+.dropdown-item.active {
+    background-color: #e7e7e7 ; /* Light grey background */
+    color: #333232 !important ;
+}

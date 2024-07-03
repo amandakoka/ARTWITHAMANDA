@@ -1,10 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %} | Home{% endblock %}
+{% block extra_title %} | Shop{% endblock %}
 
 {% block content %}
- {{ artworks }}
+<div class="container mt-5">
+    <h2 class="display-4 mb-4 text-center">Shop</h2>
+    <div class="row">
+        {% for artwork in artworks %}
+            <div class="col-md-4 mb-4">
+    <div class="card h-100">
+        <div class="card-img-container">
+            <img src="{{ artwork.image.url }}" class="card-img-top img-fluid" alt="{{ artwork.title }}">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ artwork.name }}</h5>
+            <div class="mt-auto">
+                <p class="card-text font-weight-bold">${{ artwork.price }}</p>
+                <a href="" class="btn btn-dark">View Details</a>
+            </div>
+        </div>
+    </div>
+    </div>
+        {% empty %}
+            <p class="text-center">No artworks available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
 
 

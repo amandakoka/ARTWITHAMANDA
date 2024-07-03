@@ -81,8 +81,41 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Adjust the height as needed */
+    height: 100vh;
 }
 .about-me-content {
     text-align: center;
 }
+
+.card {
+    border: 1px solid #ddd; 
+    overflow: hidden;      
+    height: 100%;
+    border-radius: 0;
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Card body styles */
+.card-body {
+    padding: 1.5rem; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Card title and text */
+.card-name {
+    font-size: 1.25rem; 
+    margin-bottom: 1rem; 
+    border-radius: 0;
+}
+
+.card-text {
+    font-size: 1rem; 
+}
+

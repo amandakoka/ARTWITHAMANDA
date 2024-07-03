@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} | {{ artwork.name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            {% if artwork.image %}
+                <a href="{{ artwork.image.url }}" target="_blank">
+                    <img src="{{ artwork.image.url }}" class="img-fluid" alt="{{ artwork.name }}">
+                </a>
+            {% else %}
+                <img src="{% static 'noimage.png' %}" class="img-fluid" alt="{{ artwork.name }}">
+            {% endif %}
+        </div>
+        <div class="col-md-6 mb-4">
+            <h2 class="display-4 mb-4">{{ artwork.name }}</h2>
+            <p class="lead">{{ artwork.description }}</p>
+            <p class="font-weight-bold mb-4">${{ artwork.price }}</p>
+            <a href="{% url 'artworks' %}" class="btn btn-secondary">Back to Shop</a>
+            <a href="" class="btn btn-dark">Add to Cart</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+

@@ -1,15 +1,20 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Artwork
-
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Artwork, Category
 
 # Create your views here.
 def all_artworks(request):
-    """ View to show all artworks """
-
+    """ A view to show all artworks, including filtering by category """
     artworks = Artwork.objects.all()
+    categories = Category.objects.all()
+    selected_categories = request.GET.getlist('category')
+
+    if selected_categories:
+        artworks = artworks.filter(category__name__in=selected_categories)
 
     context = {
-        'artworks': artworks
+        'artworks': artworks,
+        'categories': categories,
+        'selected_categories': selected_categories,
     }
 
     return render(request, 'artworks/artworks.html', context)

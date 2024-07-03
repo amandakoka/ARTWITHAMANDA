@@ -1,7 +1,17 @@
 from django.contrib import admin
+from .models import Category, Artwork
 
-from .models import Artwork, Category
 
-# Register your models here.
-admin.site.register(Artwork)
-admin.site.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
+admin.site.register(Category, CategoryAdmin)
+
+
+class ArtworkAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'category', 'image')
+    ordering = ('name',)
+    search_fields = ('name', 'description')
+    list_filter = ('category', 'price')
+
+admin.site.register(Artwork, ArtworkAdmin)

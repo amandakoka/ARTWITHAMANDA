@@ -1,0 +1,16 @@
+[
+    {
+      "model": "artworks.category",
+      "pk": 1,
+      "fields": {
+        "name": "Pencil"
+      }
+    },
+    {
+      "model": "artworks.category",
+      "pk": 2,
+      "fields": {
+        "name": "Paint"
+      }
+    }
+  ]

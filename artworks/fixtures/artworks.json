@@ -1,0 +1,333 @@
+[
+    {
+      "model": "artworks.artwork",
+      "pk": 1,
+      "fields": {
+        "name": "Cha Eun-woo",
+        "description": "A pencil drawing of South Korean singer and actor Cha Eun-woo",
+        "price": "30.00",
+        "category": 1,
+        "image": "drawing.jpg"
+      }
+    },
+    {
+      "model": "artworks.artwork",
+      "pk": 2,
+      "fields": {
+        "name": "Jake",
+        "description": "A pencil drawing of Jake from the popular kpop boy group Enhypen.",
+        "price": "30.00",
+        "category": 1,
+        "image": "IMG_3222.jpg"
+      }
+    },
+    {
+      "model": "artworks.artwork",
+      "pk": 3,
+      "fields": {
+        "name": "Charcoal Eye",
+        "description": "An eye drawn using pencil and charcoal pencils.",
+        "price": "15.00",
+        "category": 1,
+        "image": "IMG_3223.jpg"
+      }
+    },
+    {
+      "model": "artworks.artwork",
+      "pk": 4,
+      "fields": {
+        "name": "Two Eyes",
+        "description": "A pencil drawing of two eyes.",
+        "price": "15.00",
+        "category": 1,
+        "image": "IMG_3224.jpg"
+      }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 5,
+        "fields": {
+          "name": "Tigers Eye",
+          "description": "A pencil and charcoal drawing of a close up of a tiger.",
+          "price": "25.00",
+          "category": 1,
+          "image": "IMG_3225.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 6,
+        "fields": {
+          "name": "Girl Pencil Sketch",
+          "description": "A pencil and charcoal drawing of a close up of a tiger.",
+          "price": "15.00",
+          "category": 1,
+          "image": "IMG_3226.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 7,
+        "fields": {
+          "name": "Dog Painting",
+          "description": "A painting of a dog using acrylic paints on brown paper",
+          "price": "25.00",
+          "category": 2,
+          "image": "IMG_3227.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 8,
+        "fields": {
+          "name": "Two Hands",
+          "description": "A pencil drawing of two hands on top of black acrylic paint. ",
+          "price": "15.00",
+          "category": 1,
+          "image": "IMG_3228.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 9,
+        "fields": {
+          "name": "Flower Daisys",
+          "description": "A painting of dasiy flowers outlined with pen. ",
+          "price": "15.00",
+          "category": 2,
+          "image": "IMG_3229.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 10,
+        "fields": {
+          "name": "Spirited Away: 1",
+          "description": "A painting of a scene in the spirited away movie. ",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3230.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 11,
+        "fields": {
+          "name": "Spirited Away: 2",
+          "description": "A painting of a scene in the spirited away movie. ",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3231.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 12,
+        "fields": {
+          "name": "Watercolour Town",
+          "description": "A watercolour painting of a house in a town. ",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3232.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 13,
+        "fields": {
+          "name": "Watercolour Garden",
+          "description": "A watercolour painting of a garden and sky. ",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3233.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 14,
+        "fields": {
+          "name": "Cloud Painting",
+          "description": "A painting of the sky and clouds. ",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3234.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 15,
+        "fields": {
+          "name": "Night Drawing",
+          "description": "A painting of the night setting",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3235.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 16,
+        "fields": {
+          "name": "Tree Painting",
+          "description": "A painting of trees.",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3236.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 17,
+        "fields": {
+          "name": "Girl Looking Through the Window",
+          "description": "A painting of trees.",
+          "price": "20.00",
+          "category": 2,
+          "image": "IMG_3237.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 18,
+        "fields": {
+          "name": "Girl Blush",
+          "description": "A pencil drawing of a girl blushing.",
+          "price": "20.00",
+          "category": 1,
+          "image": "IMG_3238.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 19,
+        "fields": {
+          "name": "Girl Drawing: 1",
+          "description": "A pencil drawing of a girl with her hand on her face.",
+          "price": "20.00",
+          "category": 1,
+          "image": "IMG_3239.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 20,
+        "fields": {
+          "name": "Girl Drawing: 2",
+          "description": "A pencil drawing of a girl.",
+          "price": "20.00",
+          "category": 1,
+          "image": "IMG_3240.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 21,
+        "fields": {
+          "name": "Girl Drawing: 3",
+          "description": "A pencil drawing of a girl.",
+          "price": "20.00",
+          "category": 1,
+          "image": "IMG_3241.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 22,
+        "fields": {
+          "name": "Eyes and Hand",
+          "description": "A pencil drawing of 3 eyes and one hand.",
+          "price": "15.00",
+          "category": 1,
+          "image": "IMG_3243.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 23,
+        "fields": {
+          "name": "3 Faces",
+          "description": "A pencil drawing of 3 people",
+          "price": "15.00",
+          "category": 1,
+          "image": "IMG_3244.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 24,
+        "fields": {
+          "name": "Girl Drawing: Bratz",
+          "description": "A pencil drawing of a bratz girl",
+          "price": "20.00",
+          "category": 1,
+          "image": "IMG_3248.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 25,
+        "fields": {
+          "name": "Lee Jae-wook",
+          "description": "A pencil drawing of South Korean actor Lee Jae-wook",
+          "price": "25.00",
+          "category": 1,
+          "image": "IMG_3250.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 26,
+        "fields": {
+          "name": "Eye drawing charcoal",
+          "description": "A pencil and charcoal drawing of an eye",
+          "price": "25.00",
+          "category": 1,
+          "image": "IMG_3251.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 27,
+        "fields": {
+          "name": "Crying Eye",
+          "description": "A pencil drawing of an eye crying.",
+          "price": "30.00",
+          "category": 1,
+          "image": "IMG_3253.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 28,
+        "fields": {
+          "name": "Pupil and flowers",
+          "description": "A pencil drawing of an eye pupil and different flowers.",
+          "price": "30.00",
+          "category": 1,
+          "image": "IMG_3254.jpg"
+        }
+    },
+    {
+        "model": "artworks.artwork",
+        "pk": 29,
+        "fields": {
+          "name": "Sunghoon",
+          "description": "A pencil drawing of Sunghoon from the popular kpop boy group Enhypen.",
+          "price": "30.00",
+          "category": 1,
+          "image": "IMG_3255.jpg"
+        }
+    }, 
+    {
+        "model": "artworks.artwork",
+        "pk": 30,
+        "fields": {
+          "name": "Oil paint eye ",
+          "description": "An oil painting of an eye.",
+          "price": "20.00",
+          "category": 1,
+          "image": "IMG_3256.jpg"
+        }
+    } 
+    
+]

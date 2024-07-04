@@ -1,8 +1,8 @@
 from django.shortcuts import render
+from artworks.models import Artwork
 
 
-# Create your views here.
 def gallery(request):
-    """ View to return the index page """
-
-    return render(request, 'gallery/gallery.html')
+    """ View to return the gallery page with a list of artworks """
+    artworks = Artwork.objects.all()
+    return render(request, 'gallery/gallery.html', {'artworks': artworks})

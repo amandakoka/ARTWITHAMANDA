@@ -8,14 +8,14 @@
     <h2 class="display-4 mb-4 text-center">Shop</h2>
     <div class="row mb-4">
         <div class="col-md-6 d-flex justify-content-start">
-            <a href="{% url 'home' %}" class="btn btn-dark">Back to Home</a>
+            <a href="{% url 'home' %}" class="btn btn-dark mb-4">Back to Home</a>
         </div>
         <div class="col-md-6 d-flex justify-content-end">
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Categories
                 </button>
-                <div class="dropdown-menu border-0" aria-labelledby="categoryDropdown">
+                <div class="dropdown-menu border-0 mb-4" aria-labelledby="categoryDropdown">
                     <!-- Show 'All Categories' option -->
                     <a class="dropdown-item {% if selected_categories == None %}active{% endif %}" href="{% url 'artworks' %}">
                         All Categories

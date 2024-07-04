@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Artwork, Category
 
+
 # Create your views here.
 def all_artworks(request):
     """ A view to show all artworks, including filtering by category """

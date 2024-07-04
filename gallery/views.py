@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def index(request):
+def gallery(request):
     """ View to return the index page """
 
-    return render(request, 'home/index.html')
+    return render(request, 'gallery/gallery.html')

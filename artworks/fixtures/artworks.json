@@ -325,7 +325,7 @@
           "name": "Oil paint eye ",
           "description": "An oil painting of an eye.",
           "price": "20.00",
-          "category": 1,
+          "category": 2,
           "image": "IMG_3256.jpg"
         }
     } 

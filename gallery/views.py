@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Review
 from .forms import ReviewForm
-from artworks.models import Artwork  # Import Artwork model from the artworks app
+from artworks.models import Artwork
 
 def gallery(request):
     """ View to return the gallery page with a list of artworks """
@@ -14,7 +14,7 @@ def review_form(request):
         form = ReviewForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('gallery')  # Redirect to the gallery page after saving the review
+            return redirect('gallery')
     else:
         form = ReviewForm()
 

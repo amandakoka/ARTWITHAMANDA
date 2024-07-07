@@ -366,6 +366,19 @@ The following features are consistently present on all website pages, ensuring a
 - **Instagram Link**: An icon linking to the website's Instagram page, allowing users to follow and interact on social media.
 - **Footer Branding**: Repeats the website's branding in the footer for consistent branding and easy navigation.
 
+## Home Page Features
+
+### Welcome Section
+- **Introduction**: This section warmly welcomes visitors to the site, introduces Amanda, a beginner artist from the UK, and invites users to explore her art collection.
+- **Shop Now Button**: A "Shop Now" button encourages users to browse the artworks available for purchase.
+
+### Imagery
+- **Visual Appeal**: The home page includes a high-quality image that enhances the visual appeal, making the site more engaging and inviting.
+
+### About Me Section
+- **Personal Story**: Amanda shares her personal story, including her inspiration and journey into art.
+- **Gallery Button**: A "Gallery" button directs users to view all her works and witness the evolution of her artistic journey.
+
 
 # Technologies Used
 

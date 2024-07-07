@@ -349,6 +349,24 @@ The development of Art with Amanda was driven by several key factors:
 
 # Features
 
+The following features are consistently present on all website pages, ensuring a cohesive and user-friendly experience:
+
+### Navbar
+
+- **Branding**: Displays the website's brand "ART WITH AMANDA" that links to the homepage.
+- **Responsive Navigation**: A collapsible navbar that adjusts for different screen sizes, ensuring easy navigation on mobile devices.
+- **Navigation Links**: Links to key pages like Home, Gallery, Shop, and Contact.
+- **User Account Dropdown**: Provides account management options, including login, signup, profile management, and logout for authenticated users. Additionally, offers a product management link for superusers.
+- **Shopping Bag Icon**: Displays a shopping bag icon with a dynamic count of artworks in the bag, enhancing the user shopping experience.
+
+### Footer
+
+#### Social Media Integration
+
+- **Instagram Link**: An icon linking to the website's Instagram page, allowing users to follow and interact on social media.
+- **Footer Branding**: Repeats the website's branding in the footer for consistent branding and easy navigation.
+
+
 # Technologies Used
 
 ### Languages

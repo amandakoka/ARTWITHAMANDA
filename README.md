@@ -398,6 +398,26 @@ The following features are consistently present on all website pages, ensuring a
   - **View Details Button**: A button that links to a detailed page for each artwork.
 - **Empty State**: If no artworks are available, a message is displayed to inform users.
 
+## Artwork Detail Page Features
+
+### Header Section
+- **Dynamic Title**: The page title dynamically displays the name of the artwork to provide clear context to the user.
+
+### Artwork Display
+- **Image Section**: 
+  - **High-Quality Image**: Displays a large, high-quality image of the artwork.
+  - **Image Link**: Users can click the image to view it in full size in a new tab.
+  - **Fallback Image**: If no image is available, a placeholder image is shown.
+
+### Artwork Details
+- **Title**: The name of the artwork is prominently displayed as a header.
+- **Description**: Provides a detailed description of the artwork.
+- **Price**: The price of the artwork is displayed prominently in bold text.
+
+### Buttons
+- **Back to Shop Button**: A button that navigates users back to the main shop page.
+- **Add to Cart Button**: A button that allows users to add the artwork to their shopping cart.
+
 # Technologies Used
 
 ### Languages

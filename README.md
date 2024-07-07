@@ -379,6 +379,24 @@ The following features are consistently present on all website pages, ensuring a
 - **Personal Story**: Amanda shares her personal story, including her inspiration and journey into art.
 - **Gallery Button**: A "Gallery" button directs users to view all her works and witness the evolution of her artistic journey.
 
+## Shop Page Features
+
+### Header Section
+- **Title**: The page displays a prominent "Shop" title to clearly indicate to users that they are on the shopping page.
+- **Back to Home Button**: Provides a convenient way for users to navigate back to the home page with a single click.
+
+### Category Dropdown
+- **Category Selection**: A dropdown menu allows users to filter artworks by categories, making it easy to find specific types of artworks.
+- **Active Category Highlight**: The selected category is highlighted in the dropdown to indicate the current filter applied.
+
+### Artworks Grid
+- **Responsive Layout**: The artworks are displayed in a responsive grid layout, ensuring a visually appealing and organized presentation across different devices.
+- **Artwork Cards**: Each artwork is displayed in a card format, featuring:
+  - **Image**: A high-quality image of the artwork.
+  - **Title**: The name of the artwork.
+  - **Price**: The price of the artwork, displayed prominently.
+  - **View Details Button**: A button that links to a detailed page for each artwork.
+- **Empty State**: If no artworks are available, a message is displayed to inform users.
 
 # Technologies Used
 

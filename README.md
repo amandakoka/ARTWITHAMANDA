@@ -418,6 +418,25 @@ The following features are consistently present on all website pages, ensuring a
 - **Back to Shop Button**: A button that navigates users back to the main shop page.
 - **Add to Cart Button**: A button that allows users to add the artwork to their shopping cart.
 
+## Gallery Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Gallery," providing users with clear navigation context.
+
+### Navigation
+- **Review Button**: A button that links to a review form where users can leave feedback about the artworks.
+- **Back to Home Button**: A button that navigates users back to the homepage for easy access to other sections of the site.
+
+### Artwork Carousel
+- **Carousel Display**:
+  - **Artwork Showcase**: Displays artworks in a visually appealing carousel format.
+  - **High-Quality Images**: Shows large, high-quality images of the artworks for a detailed view.
+  - **Dynamic Captions**: Each artwork has a caption showing its name.
+  - **Navigation Controls**: Users can navigate through the carousel with "Previous" and "Next" buttons.
+
+### Empty State
+- **No Artworks Available**: A message displayed in the center of the carousel if there are no artworks available to show.
+
 # Technologies Used
 
 ### Languages

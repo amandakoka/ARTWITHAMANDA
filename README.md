@@ -437,6 +437,25 @@ The following features are consistently present on all website pages, ensuring a
 ### Empty State
 - **No Artworks Available**: A message displayed in the center of the carousel if there are no artworks available to show.
 
+## Leave a Review Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Leave a Review," providing users with clear context for the page’s purpose.
+
+### Review Form
+- **Form Submission**:
+  - **CSRF Protection**: Includes CSRF token for secure form submission.
+  - **Form Fields**: Displays the review form fields, including a dropdown menu for selecting the artwork being reviewed.
+  - **Dropdown Menu for Artworks**:
+    - **Artwork Selection**: A dropdown menu allows users to select from a list of available artworks. This feature ensures that reviews are linked to specific artworks.
+  - **Submit Button**: A "Submit Review" button for users to submit their reviews.
+  - **Back to Gallery Button**: A button that navigates users back to the Gallery page to view more artworks or leave additional reviews.
+
+### Imagery
+- **Visual Appeal**:
+  - **Similar Design to Home Page**: Utilizes the same high-quality image as the Home page, creating a consistent visual theme across the site.
+  - **High-Quality Image**: Features a visually engaging image that complements the page design and maintains user engagement, mirroring the welcoming and inviting atmosphere of the Home page.
+
 # Technologies Used
 
 ### Languages

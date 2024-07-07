@@ -18,7 +18,7 @@
         <div class="col-md-6 mb-4">
             <h2 class="display-4 mb-4">{{ artwork.name }}</h2>
             <p class="lead">{{ artwork.description }}</p>
-            <p class="font-weight-bold mb-4">${{ artwork.price }}</p>
+            <p class="font-weight-bold mb-4">£{{ artwork.price }}</p>
             <a href="{% url 'artworks' %}" class="btn btn-secondary">Back to Shop</a>
             <a href="" class="btn btn-dark">Add to Cart</a>
         </div>

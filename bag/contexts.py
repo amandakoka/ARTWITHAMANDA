@@ -13,26 +13,32 @@ def bag_contents(request):
     artwork_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, quantity in bag.items():
-        artworks = get_object_or_404(Artwork, pk=item_id)
-        total += quantity * artworks.price
+    for artwork_id, quantity in bag.items():
+        artwork = get_object_or_404(Artwork, pk=artwork_id)
+        total += quantity * artwork.price
         artwork_count += quantity
         bag_items.append({
-            'item_id': item_id,
+            'artwork_id': artwork_id,
             'quantity': quantity,
-            'artworks': artworks,
+            'artwork': artwork,
         })
 
     delivery = Decimal('0.00')
+    free_delivery_threshold = settings.FREE_DELIVERY_THRESHOLD
 
-    grand_total = total
+    if total < free_delivery_threshold:
+        delivery = settings.STANDARD_DELIVERY_COST
+    else:
+        delivery = Decimal('0.00')
+
+    grand_total = total + delivery
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'artwork_count': artwork_count,
         'delivery': delivery,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'free_delivery_threshold': free_delivery_threshold,
         'grand_total': grand_total,
     }
 

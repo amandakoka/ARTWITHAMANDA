@@ -123,3 +123,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #e7e7e7 ;
     color: #333232 !important ;
 }
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}

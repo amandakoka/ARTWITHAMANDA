@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_title %} | Bag{% endblock %}
 
@@ -33,7 +34,7 @@
                                         <p class="my-0">£{{ item.artwork.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.artwork_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -64,7 +65,7 @@
                                         <a class="remove-item float-right text-dark" id="remove_{{ item.artwork.artwork_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.quantity|floatformat:2 }}</p>
+                                        <p class="my-0">£{{ item.artwork.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -113,18 +114,18 @@
     {% include 'artworks/includes/quantity_input_script.html' %}
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        
             $('.update-link').click(function(e) {
                 e.preventDefault(); 
-                var form = $(this).prev('.update-form');
+                var form = $(this).closest('td').find('.update-form');
                 form.submit();
             });
     
             $('.remove-item').click(function(e) {
                 e.preventDefault();
                 var csrfToken = "{{ csrf_token }}";
-                var itemId = $(this).attr('id').split('remove_')[1];
-                var url = `/bag/remove/${itemId}`;
+                var artworkId = $(this).attr('id').split('remove_')[1];
+                var url = `/bag/remove/${artworkId}/`;
                 var data = {'csrfmiddlewaretoken': csrfToken};
     
                 $.post(url, data)
@@ -132,7 +133,8 @@
                      location.reload();
                  });
             });
-        });
+        
     </script>
     
 {% endblock %}
+

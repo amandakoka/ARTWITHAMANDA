@@ -40,7 +40,7 @@ def remove_from_bag(request, artwork_id):
     bag = request.session.get('bag', {})
 
     if artwork_id in bag:
-        bag.pop(artwork_id) 
-        request.session['bag'] = bag 
+        bag.pop(artwork_id)
+        request.session['bag'] = bag
 
     return redirect(reverse('view_bag'))

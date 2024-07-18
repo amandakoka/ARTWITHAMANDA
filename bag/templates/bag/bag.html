@@ -33,10 +33,38 @@
                                         <p class="my-0">£{{ item.artwork.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        <form class="form update-form" method="POST" action="">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-dark btn-sm rounded-0" 
+                                                            data-artwork_id="{{ item.artwork.artwork_id }}" id="decrement-qty_{{ item.artwork.artwork_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-artwork_id="{{ item.artwork.artwork_id }}"
+                                                        id="id_qty_{{ item.artwork.artwork_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-dark btn-sm rounded-0"
+                                                            data-artwork_id="{{ item.artwork.artwork_id }}" id="increment-qty_{{ item.artwork.artwork_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-link text-info text-dark"><small>Update</small></a>
+                                        <a class="remove-item float-right text-dark" id="remove_{{ item.artwork.artwork_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.artwork.price }}</p>
+                                        <p class="my-0">£{{ item.quantity|floatformat:2 }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -78,4 +106,33 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {% include 'artworks/includes/quantity_input_script.html' %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.update-link').click(function(e) {
+                e.preventDefault(); 
+                var form = $(this).prev('.update-form');
+                form.submit();
+            });
+    
+            $('.remove-item').click(function(e) {
+                e.preventDefault();
+                var csrfToken = "{{ csrf_token }}";
+                var itemId = $(this).attr('id').split('remove_')[1];
+                var url = `/bag/remove/${itemId}`;
+                var data = {'csrfmiddlewaretoken': csrfToken};
+    
+                $.post(url, data)
+                 .done(function() {
+                     location.reload();
+                 });
+            });
+        });
+    </script>
+    
 {% endblock %}

@@ -1,25 +1,25 @@
 <script type="text/javascript">
     // Function to enable/disable +/- buttons based on quantity range
-    function handleEnableDisable(itemId) {
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+    function handleEnableDisable(artworkId) {
+        var currentValue = parseInt($(`#id_qty_${artworkId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-        console.log(`Button state for item ${itemId}: minusDisabled=${minusDisabled}, plusDisabled=${plusDisabled}`);
+        $(`#decrement-qty_${artworkId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${artworkId}`).prop('disabled', plusDisabled);
+        console.log(`Button state for artwork ${artworkId}: minusDisabled=${minusDisabled}, plusDisabled=${plusDisabled}`);
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
     $(document).ready(function() {
         $('.qty_input').each(function() {
-            var itemId = $(this).data('item_id');
-            handleEnableDisable(itemId);
+            var artworkId = $(this).data('artwork_id');
+            handleEnableDisable(artworkId);
         });
 
         // Check enable/disable every time the input is changed
         $('.qty_input').change(function() {
-            var itemId = $(this).data('item_id');
-            handleEnableDisable(itemId);
+            var artworkId = $(this).data('artwork_id');
+            handleEnableDisable(artworkId);
         });
 
         // Increment quantity
@@ -30,8 +30,8 @@
             if (currentValue < 99) { 
                 $input.val(currentValue + 1);
                 console.log(`Increment button clicked. New value: ${$input.val()}`);
-                var itemId = $(this).data('item_id');
-                handleEnableDisable(itemId);
+                var artworkId = $(this).data('artwork_id');
+                handleEnableDisable(artworkId);
             }
         });
 
@@ -43,12 +43,13 @@
             if (currentValue > 1) { 
                 $input.val(currentValue - 1);
                 console.log(`Decrement button clicked. New value: ${$input.val()}`);
-                var itemId = $(this).data('item_id');
-                handleEnableDisable(itemId);
+                var artworkId = $(this).data('artwork_id');
+                handleEnableDisable(artworkId);
             }
         });
     });
 </script>
+
 
 
 

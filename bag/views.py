@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
+
 from artworks.models import Artwork
 
 
@@ -9,6 +11,8 @@ def view_bag(request):
 
 def add_to_bag(request, artwork_id):
     """ Add a quantity of the specified artwork to the shopping bag """
+
+    artwork = Artwork.objects.get(pk=artwork_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
@@ -17,6 +21,7 @@ def add_to_bag(request, artwork_id):
         bag[artwork_id] += quantity
     else:
         bag[artwork_id] = quantity
+        messages.success(request, f'Added {artwork.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)

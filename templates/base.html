@@ -102,10 +102,21 @@
     {% endblock %}
 
     {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                        
+                    {% include 'includes/toasts/toast_success.html' %}
+
+                {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 </body>
 

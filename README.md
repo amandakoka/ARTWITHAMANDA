@@ -478,4 +478,18 @@ The following features are consistently present on all website pages, ensuring a
 All testing details, including the strategy, test cases, and outcomes, are documented in the [TESTING.md](TESTING.md) file. Please refer to this file for a comprehensive overview of the testing process and results.
 
 # Deployment 
+
 # Credits 
+
+### Code Used
+
+This project was created using methods taught in the Code Institutes walkthrough project for Boutique Ado.
+
+### Content
+
+Content for the site was written by Amanda Koka.
+
+### Media
+
+Images of artwork are all Amandas work and taken by herself.
+

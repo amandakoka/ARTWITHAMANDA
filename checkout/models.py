@@ -1,5 +1,6 @@
 import uuid
 
+from decimal import Decimal
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
@@ -72,4 +73,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'Artwork {self.artwork.name} on order {self.order.order_number}'
-

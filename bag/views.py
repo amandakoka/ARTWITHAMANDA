@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 
 from artworks.models import Artwork
@@ -47,14 +47,16 @@ def adjust_bag(request, artwork_id):
 
 
 def remove_from_bag(request, artwork_id):
+    """ Remove the specified artwork from the shopping bag """
 
     artwork = get_object_or_404(Artwork, pk=artwork_id)
     bag = request.session.get('bag', {})
 
     if artwork_id in bag:
-        bag.pop(artwork_id)
-        request.session['bag'] = bag
+        bag.pop(artwork_id, None)
         messages.success(request, f'Removed {artwork.name} from your bag')
+    else:
+        messages.warning(request, f'{artwork.name} was not found in your bag')
 
+    request.session['bag'] = bag
     return redirect(reverse('view_bag'))
-

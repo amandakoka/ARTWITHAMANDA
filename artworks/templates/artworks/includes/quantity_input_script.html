@@ -1,52 +1,45 @@
 <script type="text/javascript">
-    // Function to enable/disable +/- buttons based on quantity range
-    function handleEnableDisable(artworkId) {
-        var currentValue = parseInt($(`#id_qty_${artworkId}`).val());
+
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(itemId) {
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${artworkId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${artworkId}`).prop('disabled', plusDisabled);
-        console.log(`Button state for artwork ${artworkId}: minusDisabled=${minusDisabled}, plusDisabled=${plusDisabled}`);
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
-    $(document).ready(function() {
-        $('.qty_input').each(function() {
-            var artworkId = $(this).data('artwork_id');
-            handleEnableDisable(artworkId);
-        });
+    var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
 
-        // Check enable/disable every time the input is changed
-        $('.qty_input').change(function() {
-            var artworkId = $(this).data('artwork_id');
-            handleEnableDisable(artworkId);
-        });
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
 
-        // Increment quantity
-        $('.increment-qty').click(function(e) {
-            e.preventDefault();
-            var $input = $(this).closest('.input-group').find('.qty_input');
-            var currentValue = parseInt($input.val());
-            if (currentValue < 99) { 
-                $input.val(currentValue + 1);
-                console.log(`Increment button clicked. New value: ${$input.val()}`);
-                var artworkId = $(this).data('artwork_id');
-                handleEnableDisable(artworkId);
-            }
-        });
+    // Increment quantity
+    $('.increment-qty').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue + 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
 
-        // Decrement quantity
-        $('.decrement-qty').click(function(e) {
-            e.preventDefault();
-            var $input = $(this).closest('.input-group').find('.qty_input');
-            var currentValue = parseInt($input.val());
-            if (currentValue > 1) { 
-                $input.val(currentValue - 1);
-                console.log(`Decrement button clicked. New value: ${$input.val()}`);
-                var artworkId = $(this).data('artwork_id');
-                handleEnableDisable(artworkId);
-            }
-        });
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue - 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
     });
 </script>
 

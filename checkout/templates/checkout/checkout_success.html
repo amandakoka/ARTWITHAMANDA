@@ -17,6 +17,31 @@
                     <p class="text-muted">A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
                     <p class="text-muted">If you have any questions about your order, feel free to <a href="">contact us</a>.</p>
                 </div>
+                <div class="order-summary mt-5">
+                    <h4 class="text-center">Order Summary</h4>
+                    <table class="table table-bordered mt-3">
+                        <tr>
+                            <th>Full Name</th>
+                            <td>{{ order.full_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ order.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>Order Total</th>
+                            <td>£{{ order.order_total }}</td>
+                        </tr>
+                        <tr>
+                            <th>Delivery Cost</th>
+                            <td>£{{ order.delivery_cost }}</td>
+                        </tr>
+                        <tr>
+                            <th>Grand Total</th>
+                            <td>£{{ order.grand_total }}</td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="text-center mt-4">
                     <a href="{% url 'artworks' %}" class="btn btn-dark">
                         <span class="text-center">Back to Shop</span>
@@ -26,4 +51,5 @@
         </div>
     </div>
 {% endblock %}
+
 

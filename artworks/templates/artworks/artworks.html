@@ -6,39 +6,39 @@
 {% block content %}
 <div class="container mt-5">
     <h2 class="display-4 mb-4 text-center">Shop</h2>
-    <div class="row mb-4">
-        <div class="col-md-6 d-flex justify-content-start">
-            <a href="{% url 'home' %}" class="btn btn-dark mb-4">Back to Home</a>
-        </div>
-        <div class="col-md-6 d-flex justify-content-end">
-            <div class="dropdown">
-                <button class="btn btn-dark dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categories
-                </button>
-                <div class="dropdown-menu border-0 mb-4" aria-labelledby="categoryDropdown">
-                    <!-- Show 'All Categories' option -->
-                    <a class="dropdown-item {% if selected_categories == None %}active{% endif %}" href="{% url 'artworks' %}">
-                        All Categories
-                    </a>
-                    <!-- Only show the selected category and 'All Categories' if a category is selected -->
-                    {% if selected_categories %}
-                        {% for category in categories %}
-                            {% if category.name == selected_categories.0 %}
-                                <a class="dropdown-item active" href="{% url 'artworks' %}?category={{ category.name }}">
-                                    {{ category.name }}
-                                </a>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                        <!-- Show all categories if no category is selected -->
-                        {% for category in categories %}
-                            <a class="dropdown-item {% if category.name in selected_categories %}active{% endif %}" 
-                               href="{% url 'artworks' %}?category={{ category.name }}{% if selected_categories and category.name != selected_categories.0 %}&category={{ selected_categories|join:"&category=" }}{% endif %}">
-                               {{ category.name }}
+    <hr>
+    <div class="d-flex justify-content-between mb-4">
+        <!-- Back to Home Button -->
+        <a href="{% url 'home' %}" class="btn btn-dark mb-4">Back to Home</a>
+
+        <!-- Categories Dropdown -->
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+            </button>
+            <div class="dropdown-menu border-0 mb-4" aria-labelledby="categoryDropdown">
+                <!-- Show 'All Categories' option -->
+                <a class="dropdown-item {% if selected_categories == None %}active{% endif %}" href="{% url 'artworks' %}">
+                    All Categories
+                </a>
+                <!-- Only show the selected category and 'All Categories' if a category is selected -->
+                {% if selected_categories %}
+                    {% for category in categories %}
+                        {% if category.name == selected_categories.0 %}
+                            <a class="dropdown-item active" href="{% url 'artworks' %}?category={{ category.name }}">
+                                {{ category.name }}
                             </a>
-                        {% endfor %}
-                    {% endif %}
-                </div>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <!-- Show all categories if no category is selected -->
+                    {% for category in categories %}
+                        <a class="dropdown-item {% if category.name in selected_categories %}active{% endif %}" 
+                           href="{% url 'artworks' %}?category={{ category.name }}{% if selected_categories and category.name != selected_categories.0 %}&category={{ selected_categories|join:"&category=" }}{% endif %}">
+                           {{ category.name }}
+                        </a>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

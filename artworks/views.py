@@ -41,9 +41,9 @@ def add_artwork(request):
     if request.method == 'POST':
         form = ArtworkForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            artwork = form.save()
             messages.success(request, 'Successfully added artwork!')
-            return redirect(reverse('artworks'))
+            return redirect(reverse('artwork_detail', args=[artwork.id]))
         else:
             messages.error(request, 'Failed to add artwork. Please ensure the form is valid.')
     else:
@@ -55,8 +55,6 @@ def add_artwork(request):
     }
 
     return render(request, template, context)
-
-
 def edit_artwork(request, artwork_id):
     """ Edit an artwork in the store """
     artwork = get_object_or_404(Artwork, pk=artwork_id)
@@ -79,3 +77,11 @@ def edit_artwork(request, artwork_id):
     }
 
     return render(request, template, context)
+
+
+def delete_artwork(request, artwork_id):
+    """ Delete an artwork from the store """
+    artwork = get_object_or_404(Artwork, pk=artwork_id)
+    artwork.delete()
+    messages.success(request, 'Artwork deleted!')
+    return redirect(reverse('artworks'))

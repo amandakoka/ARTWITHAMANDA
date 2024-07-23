@@ -56,6 +56,12 @@
                         <div class="mt-auto">
                             <p class="card-text font-weight-bold">£{{ artwork.price }}</p>
                             <a href="{% url 'artwork_detail' artwork.id %}" class="btn btn-dark">View Details</a>
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_artwork' artwork.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_artwork' artwork.id %}">Delete</a>
+                                </small>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

@@ -19,6 +19,12 @@
             <h2 class="display-4 mb-4">{{ artwork.name }}</h2>
             <p class="lead">{{ artwork.description }}</p>
             <p class="font-weight-bold mb-4">£{{ artwork.price }}</p>
+            {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_artwork' artwork.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_artwork' artwork.id %}">Delete</a>
+                </small>
+            {% endif %}
             <form class="form" action="{% url 'add_to_bag' artwork.id %}" method="POST">
                 {% csrf_token %}
                 <div class="form-row">

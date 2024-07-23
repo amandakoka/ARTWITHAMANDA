@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-e66&_a96h%2u&cgggnaulib*p#@i_d=gc+zi#6-*#fhefv080-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'art-with-amanda.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-amandakoka-artwithamand-4bavm5xwij7.ws.codeinstitute-ide.net', 'art-with-amanda.herokuapp.com', 'localhost']
 
 
 # Application definition

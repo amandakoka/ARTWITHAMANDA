@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
+
 from .models import Artwork, Category
+from .forms import ArtworkForm
 
 
 # Create your views here.
@@ -31,3 +33,13 @@ def artwork_detail(request, artwork_id):
     }
 
     return render(request, 'artworks/artwork_detail.html', context)
+
+
+def add_artwork(request):
+    form = ArtworkForm()
+    template = 'artworks/add_artwork.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

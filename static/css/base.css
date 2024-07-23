@@ -2,12 +2,15 @@
 
 /* Global Styles */
 body {
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* Headings Styles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Arapey', serif; 
+    font-family: 'Arapey', serif;
 }
 
 /* Navbar Styles */
@@ -43,8 +46,102 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #555;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* Footer Styles */
+.footer {
+    background-color: #333232;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
 
+.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.footer .footer-logo-img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer .footer-logo-text {
+    font-family: 'Arapey', serif;
+    font-size: 1.5rem;
+    color: #e7e7e7;
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: #333232;
+    border-color: #333232;
+}
+
+.btn-dark:hover {
+    background-color: #444343;
+    border-color: #444343;
+}
+
+/* About Me Section */
+.about-me-section {
+    background-color: #e7e7e7 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.about-me-content {
+    text-align: center;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #ddd;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 0;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-name {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Dropdown Item Active State */
+.dropdown-item.active {
+    background-color: #e7e7e7;
+    color: #333232 !important;
+}
+
+/* Update and Remove Item Cursors */
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* ------------------------------- Bootstrap Toasts */
 .message-container {
     position: fixed;
     top: 72px;
@@ -60,86 +157,26 @@ h1, h2, h3, h4, h5, h6 {
     height: 2px;
 }
 
-/* Footer Styles */
-.footer {
-    background-color: #333232;
+
+@media (max-width: 768px) {
+    
+    #top-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    #bottom-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
 }
 
-.footer .footer-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
 
-.footer .footer-logo-img {
-    height: 30px; 
-}
+@media (min-width: 769px) and (max-width: 991px) {
+    #top-section {
+        padding: 5rem;
+    }
 
-.footer .footer-logo-text {
-    font-family: 'Arapey', serif;
-    font-size: 1.5rem;
-    color: #ffffff
-}
-
-.btn-dark {
-    background-color: #333232;
-    border-color: #333232;
-}
-
-.btn-dark:hover {
-    background-color: #444343;
-    border-color: #444343;
-}
-
-.about-me-section {
-    background-color: #e7e7e7 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-.about-me-content {
-    text-align: center;
-}
-
-.card {
-    border: 1px solid #ddd; 
-    overflow: hidden;      
-    height: 100%;
-    border-radius: 0;
-}
-
-.card-img-top {
-    height: 200px; 
-    object-fit: cover;
-    border-radius: 0;
-}
-
-/* Card body styles */
-.card-body {
-    padding: 1.5rem; 
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-/* Card title and text */
-.card-name {
-    font-size: 1.25rem; 
-    margin-bottom: 1rem; 
-    border-radius: 0;
-}
-
-.card-text {
-    font-size: 1rem; 
-}
-
-.dropdown-item.active {
-    background-color: #e7e7e7 ;
-    color: #333232 !important ;
-}
-
-.update-link,
-.remove-item {
-    cursor: pointer;
+   
 }

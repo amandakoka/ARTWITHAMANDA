@@ -11,7 +11,6 @@ python3-openid==3.2.0
 pytz==2024.1
 requests==2.32.3
 requests-oauthlib==2.0.0
-setuptools==56.0.0
 sqlparse==0.5.0
 urllib3==2.2.2
 wheel==0.43.0
@@ -20,6 +19,5 @@ stripe==10.4.0
 dj_database_url==0.5.0
 psycopg2==2.9.9
 gunicorn==22.0.0
-
 
 

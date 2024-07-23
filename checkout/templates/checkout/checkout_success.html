@@ -15,7 +15,7 @@
                     <p class="lead">Thank you for your order, {{ order.full_name }}!</p>
                     <p class="lead">Your order number is <strong>{{ order.order_number }}</strong>.</p>
                     <p class="text-muted">A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-                    <p class="text-muted">If you have any questions about your order, feel free to <a href="">contact us</a>.</p>
+                    <p class="text-muted">If you have any questions about your order, feel free to <a href="{% url 'contact'%}">contact us</a>.</p>
                 </div>
                 <div class="order-summary mt-5">
                     <h4 class="text-center">Order Summary</h4>

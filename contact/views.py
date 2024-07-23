@@ -4,12 +4,13 @@ from django.conf import settings
 from .forms import ContactForm
 from .models import ContactMessage
 
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             contact_message = form.save()
-
+ 
             send_mail(
                 f'Contact Form Submission from {contact_message.name}',
                 contact_message.message,

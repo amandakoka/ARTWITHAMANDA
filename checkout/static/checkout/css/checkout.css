@@ -1,13 +1,13 @@
+/* Stripe Elements Styling */
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
 }
 
@@ -22,35 +22,81 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
+/* Fieldset Labels */
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: 0.5rem;
 }
 
+/* Form Controls */
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+  color: #000;
+  border: 1px solid #000;
 }
 
+/* Loading Overlay */
 #loading-overlay {
-	display: none;
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 9999;
 }
 
 .loading-spinner {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+/* Buttons */
+.btn-dark {
+  margin-bottom: 2rem;
+}
+
+/* Media Query for tablets and smaller devices (up to 768px) */
+@media (max-width: 768px) {
+  h2.display-4 {
+    font-size: 2rem; 
+  }
+
+  .lead {
+    font-size: 1rem; 
+  }
+
+  .text-muted {
+    font-size: 0.875rem; 
+  }
+
+  .table th, .table td {
+    font-size: 0.875rem; 
+  }
+}
+
+/* Media Query for mobile devices (up to 576px) */
+@media (max-width: 576px) {
+  h2.display-4 {
+    font-size: 1.5rem; 
+  }
+
+  .lead {
+    font-size: 0.875rem; 
+  }
+
+  .text-muted {
+    font-size: 0.75rem; 
+  }
+
+  .table th, .table td {
+    font-size: 0.75rem; 
+  }
 }

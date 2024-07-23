@@ -18,8 +18,10 @@ def account(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-
-    form = UserAccountForm(instance=account)
+        else:
+            messages.error(request, 'Profile update failed')
+    else:
+        form = UserAccountForm(instance=account)
     orders = account.orders.all()
 
     template = 'accounts/account.html'

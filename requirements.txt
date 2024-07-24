@@ -19,6 +19,6 @@ stripe==10.4.0
 dj_database_url==0.5.0
 psycopg2==2.9.9
 gunicorn==22.0.0
-setuptools-58.0.4
+setuptools==58.0.4
 
 

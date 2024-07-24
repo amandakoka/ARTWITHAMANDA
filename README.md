@@ -612,6 +612,164 @@ We have been using the sqlite3 database in development, however this is only ava
 
 6. Save, add, commit and push these changes.
 
+### Setting Up AWS Hosting for Static and Media Files
+
+#### **Creating and Configuring an S3 Bucket**
+
+1. **Sign In and Create a Bucket**: Log into your [AWS account](https://aws.amazon.com). Navigate to S3 and create a new bucket. Name the bucket after your project and choose the region closest to you. In the object ownership section, select "ACLs enabled" and "Bucket owner preferred." Uncheck "Block all public access" and acknowledge the warning to make the bucket public. Click "Create bucket."
+
+2. **Enable Static Website Hosting**: Select your newly created bucket, go to the "Properties" tab, find the "Static website hosting" section, and enable it. Choose "Host a static website" and set `index.html` and `error.html` as the documents (even though they won't be used).
+
+3. **Set Bucket Policy**: In the "Permissions" tab, copy the ARN (Amazon Resource Name). Go to the "Bucket Policy" section, click "Edit" and open the policy generator. Set the policy type to "S3 bucket policy," allow all principals by entering `*`, and select the "GetObject" action. Paste the ARN you copied and add a `/*` at the end. Generate the policy, copy it, and paste it into the bucket policy editor. Click "Save."
+
+4. **Configure CORS**: Edit the Cross-Origin Resource Sharing (CORS) settings by pasting the following JSON:
+
+    ```json
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+
+5. **Adjust ACL Settings**: In the Access Control List (ACL) section, enable "List" for everyone (public access) and acknowledge the warning.
+
+#### **Creating AWS IAM Groups, Policies, and Users**
+
+1. **Create a User Group**: Navigate to IAM by clicking "Services" on the top right. In the IAM dashboard, go to "User groups" and click "Create group." Name your group (e.g., `manage-seaside-sewing`).
+
+2. **Create a Policy**: Click "Create policy." In the JSON tab, import the managed policy "AmazonS3FullAccess." Modify the resources by making it an array and pasting the bucket's ARN twice, adding `/*` to the second one. Click "Next: tags," "Next: review," and then "Create policy."
+
+3. **Attach Policy to Group**: In the IAM dashboard, go to "User groups," select your group, and go to the "Permissions" tab. Click "Add permissions," choose "Attach policies," select your policy, and click "Add permissions."
+
+4. **Create a User**: Go to "Users" in the IAM dashboard and click "Add users." Name the user (e.g., `seaside-sewing-staticfiles-user`), select "Programmatic access," and click "Next: permissions." Add the user to your group, then click "Next: tags," "Next: review," and "Create user." Download the CSV file with the access key and secret access key.
+
+#### **Connecting Django to S3**
+
+1. **Install Dependencies**: Install `boto3` and `django-storages` and update `requirements.txt`:
+
+    ```bash
+    pip3 install boto3 django-storages
+    pip3 freeze > requirements.txt
+    ```
+
+2. **Update Django Settings**: Add `storages` to `INSTALLED_APPS` in `settings.py`. Add the following configuration for S3:
+
+    ```python
+    if 'USE_AWS' in os.environ:
+        AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+            'CacheControl': 'max-age=9460800',
+        }
+        
+        AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+        AWS_S3_REGION_NAME = 'your-region'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    ```
+
+3. **Configure Heroku**: In Heroku, add the following config vars:
+
+    | KEY | VALUE |
+    | --- | ----- |
+    | AWS_ACCESS_KEY_ID | The access key from the CSV file |
+    | AWS_SECRET_ACCESS_KEY | The secret access key from the CSV file |
+    | USE_AWS | True |
+
+4. **Remove DISABLE_COLLECTSTATIC**: If set, remove the `DISABLE_COLLECTSTATIC` variable from Heroku.
+
+5. **Create `custom_storages.py`**: Create a file called `custom_storages.py` in your project root. Import `S3Boto3Storage` and define custom storage classes for static and media files:
+
+    ```python
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+    class StaticStorage(S3Boto3Storage):
+        location = 'static'
+
+    class MediaStorage(S3Boto3Storage):
+        location = 'media'
+    ```
+
+6. **Update `settings.py`**: Add the following to configure static and media file storage:
+
+    ```python
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+
+7. **Deploy to Heroku**: Save, commit, and push your changes to Heroku. Verify in the build log that static files are collected, and check your S3 bucket for the static folder.
+
+8. **Create Media Folder**: In your S3 bucket, create a new folder named `media` for storing media files.
+
+#### **Setting Up Stripe**
+
+1. **Add Stripe Keys to Heroku**: Log into Stripe, go to "Developers" > "API keys." In Heroku, add the following config vars:
+
+    | KEY | VALUE |
+    | --- | ----- |
+    | STRIPE_PUBLIC_KEY | Your Stripe publishable key |
+    | STRIPE_SECRET_KEY | Your Stripe secret key |
+
+2. **Add Webhook Endpoint**: In Stripe, go to "Webhooks," click "Add endpoint," and enter your site's webhook URL. Select all events and create the endpoint. Add the webhook signing secret to Heroku as `STRIPE_WH_SECRET`.
+
+3. **Update `settings.py`**: Add the Stripe keys to your settings:
+
+    ```python
+    STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+    STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+    STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+    ```
+
+### Bug Encountered During Deployment
+
+During the deployment process, I encountered a bug. Detailed information about the bug, the troubleshooting steps taken, and how it was resolved can be found in the [TESTING.md](TESTING.md) file.
+
+### Local Development
+
+#### **How to Fork**
+
+To fork the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Navigate to the [art-with-amanda repository](https://github.com/kera-cudmore/art-with-amanda).
+3. Click the "Fork" button in the top right corner of the page.
+
+#### **How to Clone**
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Navigate to the [art-with-amanda repository](https://github.com/kera-cudmore/art-with-amanda).
+3. Click the "Code" button, choose whether to clone using HTTPS, SSH, or GitHub CLI, and copy the provided link.
+4. Open the terminal in your preferred IDE and navigate to the directory where you want to clone the repository.
+5. Run the following command, replacing `<copied-link>` with the link you copied in step 3:
+
+    ```bash
+    git clone <copied-link>
+    ```
+
+6. Set up a virtual environment if it's not automatically set up (Note: This step is not necessary if you are using the Code Institute template and have opened the repository in GitPod).
+
+7. Install the required packages by running the following command:
+
+    ```bash
+    pip3 install -r requirements.txt
+    ```
 
 # Credits 
 

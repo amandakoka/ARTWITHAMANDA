@@ -472,6 +472,8 @@ The following features are consistently present on all website pages, ensuring a
 - **GitHub**: Used for hosting the project repository and deployment using GitHub Pages.
 - **Heroku**: Cloud platform used for deployment of the Django application.
 - **VS Code**: Integrated development environment used for coding and project management.
+- **AWS**: Cloud platform used for hosting static and media files through Amazon S3. 
+- **ElephantSQL**: Managed PostgreSQL database service used for providing a cloud-based PostgreSQL database. 
 
 # Testing
 

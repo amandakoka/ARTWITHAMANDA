@@ -2,7 +2,7 @@
 
 Art with Amanda is a full-stack e-commerce website that I developed as my final milestone project for the Level 5 Diploma in Web Development with Code Institute. As an artist, I built this platform using Django, Python, HTML, CSS, and JavaScript to showcase and sell my original artworks and prints. With Stripe integration for secure payments, the website provides a user-friendly interface where visitors can explore a diverse collection of my artwork, view detailed descriptions, and make purchases seamlessly. This project not only highlights my artistic endeavors but also demonstrates my proficiency in web development, combining my passion for art with modern technologies to create an engaging online gallery experience.
 
-[View website here]()
+[View website here](https://art-with-amanda-fc934063cf38.herokuapp.com/)
 
 ![Website on different views]()
 
@@ -487,7 +487,6 @@ Stripe for the website is currently in developer mode, which allows us to be abl
 | Require authorisation | 4000 0027 6000 3184 | A date in the future | Any 3 digits | Any 5 digits |
 | Declined | 4000 0000 0000 0002 | A date in the future | Any 3 digits | Any 5 digits |
 
-
 # Testing
 
 All testing details, including the strategy, test cases, and outcomes, are documented in the [TESTING.md](TESTING.md) file. Please refer to this file for a comprehensive overview of the testing process and results.
@@ -788,7 +787,12 @@ To clone the repository:
 
 # Credits 
 
-### Code Used
+### Media
+
+Images of artwork are all Amandas work and taken by herself.
+
+
+### Code 
 
 This project was created using methods taught in the Code Institutes walkthrough project for Boutique Ado.
 
@@ -796,7 +800,4 @@ This project was created using methods taught in the Code Institutes walkthrough
 
 Content for the site was written by Amanda Koka.
 
-### Media
-
-Images of artwork are all Amandas work and taken by herself.
 

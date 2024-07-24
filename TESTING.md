@@ -53,3 +53,34 @@ During deployment, the application failed to build correctly when pushing to Her
 - **`runtime.txt`:** Created a `runtime.txt` file in the root directory to specify the Python version to be used in the Heroku environment. This file includes:
   ```plaintext
   python-3.10.14
+
+
+## User Stories Testing
+
+| **User Story ID** | **Test Case ID** | **Description** | **Preconditions** | **Test Steps** | **Expected Result** | **Status** | **Comments** |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **VIEWING & NAVIGATION** | TC01 | Test navigation through site | Home page is loaded | 1. Click on various menu items.<br>2. Navigate to different sections. | User can navigate to all sections easily. | | |
+|  | TC02 | Test contacting the artist | Contact form is available | 1. Fill out the contact form.<br>2. Submit the form. | Contact form submits successfully, and an acknowledgment is displayed. | | |
+|  | TC03 | Test artist information page | Artist information page exists | 1. Navigate to the artist's info page.<br>2. Check for biography and background. | Artist's background and journey are visible. | | |
+|  | TC04 | Test viewing artwork by category | Categories are available | 1. Select a category from the dropdown.<br>2. Verify displayed artworks. | Only artworks from the selected category are displayed. | | |
+|  | TC05 | Test viewing artwork details | Artwork details are available | 1. Click on an artwork.<br>2. View details page. | Artwork details, including descriptions, dimensions, and materials, are visible. | | |
+|  | TC06 | Test running total of purchases | Cart is updated | 1. Add items to cart.<br>2. View running total. | Running total is updated correctly as items are added. | | |
+| **REGISTRATION & USER ACCOUNTS** | TC07 | Test account registration | Registration page is available | 1. Fill out the registration form.<br>2. Submit the form. | Account is created, and confirmation message is shown. | | |
+|  | TC08 | Test email confirmation for registration | Registration is complete | 1. Check email inbox.<br>2. Verify confirmation email. | Confirmation email is received and contains correct information. | | |
+|  | TC09 | Test login and logout functionality | User account is registered | 1. Log in with valid credentials.<br>2. Log out. | User can log in and out successfully. | | |
+|  | TC10 | Test viewing profile page | User is logged in | 1. Navigate to profile page.<br>2. Check previous orders and info. | Previous orders and profile info are visible. | | |
+|  | TC11 | Test password reset functionality | User account is active | 1. Request password reset.<br>2. Follow reset instructions. | Password is reset, and user can log in with the new password. | | |
+| **SORTING & SEARCHING** | TC12 | Test sorting artworks | Artworks are listed | 1. Sort artworks by price.<br>2. Verify sorting order. | Artworks are sorted correctly by price. | | |
+|  | TC13 | Test sorting within a category | Category page is loaded | 1. Sort artworks by name in a category.<br>2. Verify sorting order. | Artworks are sorted correctly by name. | | |
+|  | TC14 | Test search results and count | Search functionality is available | 1. Perform a search.<br>2. Check search results and count. | Search results and count match the query. | | |
+| **PURCHASING & CHECKOUT** | TC15 | Test selecting size and quantity | Artwork is available for purchase | 1. Select size and quantity.<br>2. Add to cart. | Size and quantity are selected correctly. | | |
+|  | TC16 | Test viewing items in the bag | Items are in the bag | 1. Navigate to the bag.<br>2. Verify items and total cost. | All items and the total cost are displayed correctly. | | |
+|  | TC17 | Test adjusting quantity in the bag | Items are in the bag | 1. Adjust item quantities.<br>2. Verify changes. | Quantities are adjusted correctly in the bag. | | |
+|  | TC18 | Test entering payment information | Checkout page is loaded | 1. Enter payment details.<br>2. Proceed with payment. | Payment information is entered and processed successfully. | | |
+|  | TC19 | Test security of payment information | Checkout page is loaded | 1. Enter payment details.<br>2. Verify secure connection. | Payment information is securely processed. | | |
+|  | TC20 | Test order confirmation page | Checkout is complete | 1. Complete the checkout process.<br>2. Verify confirmation page. | Order confirmation is displayed. | | |
+|  | TC21 | Test email confirmation after checkout | Checkout is complete | 1. Check email inbox.<br>2. Verify confirmation email. | Confirmation email is received and accurate. | | |
+| **ADMIN & STORE MANAGEMENT** | TC22 | Test adding new artwork | Admin is logged in | 1. Navigate to artwork management.<br>2. Add new artwork details. | New artwork is added and visible on the site. | | |
+|  | TC23 | Test editing artwork details | Existing artwork is available | 1. Edit artwork details.<br>2. Save changes. | Artwork details are updated correctly. | | |
+|  | TC24 | Test deleting artwork | Existing artwork is available | 1. Delete artwork.<br>2. Verify removal. | Artwork is removed from the site. | | |
+

@@ -787,17 +787,24 @@ To clone the repository:
 
 # Credits 
 
-### Media
+## Media
 
-Images of artwork are all Amandas work and taken by herself.
+- **Artwork Images:** All images of artwork displayed on the site are created by Amanda Koka. The photos were taken by Amanda Koka herself, ensuring that each piece is authentically represented and showcasing her artistic vision.
 
+## Code
 
-### Code 
+- **Development:** This project was created using methods taught in the Code Institutes walkthrough project for Boutique Ado..
 
-This project was created using methods taught in the Code Institutes walkthrough project for Boutique Ado.
+## Content
 
-### Content
+- **Website Content:** All content on the website, including text, descriptions, and product details, was written by Amanda Koka. This includes the artist's biography, artwork descriptions, and any other relevant information provided on the site.
 
-Content for the site was written by Amanda Koka.
+## Acknowledgements
+
+- **Code Institute:** Special thanks to the Code Institute for their comprehensive tutorials and support throughout the development of this project.
+- **Tutor Support:** Appreciation to Rebecca for deployment support.
+- **Family and Friends:** Thanks to family and friends who provided encouragement and feedback throughout the project.
+- **Online Resources:** Recognition to various online resources and communities that provided solutions and inspiration during the development process, including Stack Overflow, Django documentation, Bootstrap docs and the Slack community.
+
 
 

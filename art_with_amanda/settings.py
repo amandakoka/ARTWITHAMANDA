@@ -35,7 +35,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
 
     '8000-amandakoka-artwithamand-4bavm5xwij7.ws.codeinstitute-ide.net',
-    'art-with-amanda.herokuapp.com',
+    'art-with-amanda-fc934063cf38.herokuapp.com',
     'localhost',
     '127.0.0.1',
 

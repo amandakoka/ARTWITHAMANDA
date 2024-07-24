@@ -1,1 +1,1 @@
-web: gunicorn art_with_amanda.wsgi:application
+web: gunicorn art_with_amanda.wsgi

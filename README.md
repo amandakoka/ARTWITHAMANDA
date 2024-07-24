@@ -475,6 +475,19 @@ The following features are consistently present on all website pages, ensuring a
 - **AWS**: Cloud platform used for hosting static and media files through Amazon S3. 
 - **ElephantSQL**: Managed PostgreSQL database service used for providing a cloud-based PostgreSQL database. 
 
+### Stripe
+
+[Stripe](https://stripe.com/gb) has been used in the project to implement the payment system.
+
+Stripe for the website is currently in developer mode, which allows us to be able to process test payments to check the function of the site.
+
+| Type | Card No | Expiry | CVC | ZIP |
+| :--- | :--- |:--- | :--- | :--- |
+| Success| Visa | 4242 4242 4242 4242 | A date in the future | Any 3 digits | Any 5 digits |
+| Require authorisation | 4000 0027 6000 3184 | A date in the future | Any 3 digits | Any 5 digits |
+| Declined | 4000 0000 0000 0002 | A date in the future | Any 3 digits | Any 5 digits |
+
+
 # Testing
 
 All testing details, including the strategy, test cases, and outcomes, are documented in the [TESTING.md](TESTING.md) file. Please refer to this file for a comprehensive overview of the testing process and results.

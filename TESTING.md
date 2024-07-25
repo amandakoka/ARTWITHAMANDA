@@ -97,17 +97,21 @@ W3C [HTML Validator](https://validator.w3.org/) was be used to validate the HTML
 
 | Page                  | Result | Evidence |
 | :--- | :--- | :---: |
-| Home Page             |        |          |
-| Shop Page             |        |          |
-| Artwork Detail Page   |        |          |
-| Gallery Page          |        |          |
-| Review Page           |        |          |
-| Contact Page          |        |          |
-| Contact Success Page  |        |          |
-| Bag Page              |        |          |
-| Checkout Page         |        |          |
-| Checkout Success Page |        |          |
-| Account Page          |        |          |
+| Home Page             |   Pass     | [Homepage](documentation/HTMLval/hp-html.png) |
+| Shop Page             |   Pass     | [Shop](documentation/HTMLval/shop-html.png) |
+| Artwork Detail Page   |    Pass    | [ArtDetail](documentation/HTMLval/artdetail-html.png)|
+| Gallery Page          |    Pass    | [Gallery](documentation/HTMLval/gallery-html.png) |
+| Review Page           |    Pass    | [Review](documentation/HTMLval/review-html.png) |
+| Contact Page          |    Pass    | [Contact](documentation/HTMLval/contact-html.png)|
+| Contact Success Page  |    Pass    | [ContactSuccess](documentation/HTMLval/contact-success-html.png) |
+| Bag Page              |   Pass     | [Bag](documentation/HTMLval/bag-html.png) |
+| Checkout Page         |    Pass    | [Checkout](documentation/HTMLval/checkout-html.png) |
+| Checkout Success Page |    Pass    | [CheckoutSuccess](documentation/HTMLval/checkout-success-html.png) |
+| Account Page          |    Pass    | [Account](documentation/HTMLval/account-html.png) |
+| Login Page            |    Pass    | [Login](documentation/HTMLval/login-html.png)|
+| Register Page         |    Pass    | [Register](documentation/HTMLval/register-html.png)|
+| Add Page              |    Pass    | [Add artwork](documentation/HTMLval/add-html.png)|
+| Edit Page             |    Pass    | [Edit artwork](documentation/HTMLval/edit-html.png)|
 
 ### CSS
 

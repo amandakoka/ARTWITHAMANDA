@@ -125,7 +125,7 @@ W3C [HTML Validator](https://validator.w3.org/) was be used to validate the HTML
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| checkout/static/checkout/js/stripe-elements.js |  | |
+| checkout/static/checkout/js/stripe-elements.js | Pass | [stripe-elements.js](documentation/JSval/jsval.png) |
 
 ## Python Validation
 

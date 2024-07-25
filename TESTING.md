@@ -1,8 +1,40 @@
-# Testing
+# ARTWITHAMANDA Testing
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Bugs](#bugs)
+   - [Solved Bugs](#solved-bugs)
+   - [Deployment Bug](#deployment-bug)
+3. [Known Bugs](#known-bugs)
+4. [Validation](#validation)
+   - [HTML, CSS, JS Validation](#html-css-js-validation)
+   - [Python Validation](#python-validation)
+5. [Lighthouse Testing](#lighthouse-testing)
+6. [User Stories Testing](#user-stories-testing)
+
+## Introduction
 
 Testing is a crucial aspect of the development process for the "Art with Amanda" website. From the start of the project to its completion,  testing was conducted to ensure the functionality, usability, and reliability of the platform. This document outlines the various testing strategies used to deliver a seamless and robust user experience.
 
+The website was tested on the following devices: 
+
+- MacBook air 13 inch
+- Ipad 7th Gen
+- Iphone 12
+- Iphone 12 mini
+
+In addition, the website was tested using google chrome developer tools to ensure the responsiveness on different screen sizes by pressing all device options.
+
+### Browser testing
+
+The website was tested on the following browsers:
+
+- Google Chrome
+- Safari
+- Firefox
+
 ## Bugs
+
 ### Solved Bugs
 |**Num** | **Bug** | **Fix** |
 | ----------- | ----------- | ---------- |
@@ -53,6 +85,15 @@ During deployment, the application failed to build correctly when pushing to Her
 - **`runtime.txt`:** Created a `runtime.txt` file in the root directory to specify the Python version to be used in the Heroku environment. This file includes:
   ```plaintext
   python-3.10.14
+
+
+## Known Bugs
+
+## HTML,CSS,JS Validation
+
+## Python Validation
+
+## Lighthouse Testing
 
 
 ## User Stories Testing

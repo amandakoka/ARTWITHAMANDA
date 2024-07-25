@@ -4,8 +4,6 @@ Art with Amanda is a full-stack e-commerce website that I developed as my final 
 
 [View website here](https://art-with-amanda-fc934063cf38.herokuapp.com/)
 
-![Website on different views]()
-
 # Table of Contents
 
 1. [User Experience](#user-experience)
@@ -533,6 +531,68 @@ The following features are consistently present on all website pages, ensuring a
 ### Consistent Design
 - **Visual Cohesion**: Ensures the bag page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
 - **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the shopping bag contents and actions, enhancing usability.
+
+## Checkout Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Checkout," clearly indicating that users are on the checkout page.
+
+### Main Content
+- **Order Summary**:
+  - **Heading**: Features a prominent "Order Summary" heading.
+  - **Items List**: Displays a list of items in the cart with:
+    - **Artwork Image**: A thumbnail image of each artwork.
+    - **Artwork Details**: Includes the artwork’s name and quantity.
+    - **Price**: Shows the price of each item.
+  - **Totals**: Displays the subtotal, delivery cost, and grand total for the order.
+
+### Order Form
+- **Personal Details**:
+  - **Section**: Includes fields for the user’s full name and email.
+- **Delivery Details**:
+  - **Section**: Includes fields for phone number, country, postcode, town/city, street addresses, and county.
+  - **Save Information Option**: Allows authenticated users to save delivery information to their profile or prompts users to create an account or log in to save information.
+- **Payment Details**:
+  - **Section**: Contains a card element for payment information and displays any card errors.
+
+### Actions
+- **Adjust Bag Button**: A button that navigates users back to the bag page to modify their cart.
+- **Complete Order Button**: A prominent button to finalize the order, styled as a dark button with uppercase text.
+- **Card Charge Warning**: A warning message indicating the amount that will be charged to the user's card.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the checkout page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
+- **Loading Overlay**: Displays a loading spinner while processing, enhancing user experience during checkout.
+
+### Post-Load JavaScript
+- **Stripe Integration**: Includes Stripe public key and client secret for payment processing.
+- **JavaScript File**: Loads a custom script for handling Stripe Elements integration.
+
+## Checkout Success Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Order Complete," clearly indicating that the order has been successfully completed.
+
+### Main Content
+- **Order Confirmation**:
+  - **Heading**: Features a prominent "Order Complete" heading.
+  - **Thank You Message**: A message thanking the user for their order and providing their order number.
+  - **Confirmation Email**: Informs users that a confirmation email will be sent and provides contact information in case of questions.
+
+### Order Summary
+- **Order Details**:
+  - **Table**: Displays a summary table with:
+    - **Full Name**: The name provided during checkout.
+    - **Email**: The email address used for the order.
+    - **Order Total**: The total amount of the order.
+    - **Delivery Cost**: The cost of delivery.
+    - **Grand Total**: The total amount including delivery.
+
+### Actions
+- **Back to Shop Button**: A button that navigates users back to the shop page, styled as a dark button for easy navigation.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the success page aligns visually with the rest of the site, maintaining a clean and engaging design.
 
 
 

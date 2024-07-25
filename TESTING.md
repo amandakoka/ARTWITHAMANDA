@@ -115,7 +115,7 @@ W3C [HTML Validator](https://validator.w3.org/) was be used to validate the HTML
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| static/css/base.css |  |  |
+| static/css/base.css | Pass |  |
 | checkout/static/checkout/css/checkout.css |  | |
 | accounts/static/accounts/css/account.css |  |  |
 
@@ -128,6 +128,25 @@ W3C [HTML Validator](https://validator.w3.org/) was be used to validate the HTML
 | checkout/static/checkout/js/stripe-elements.js |  | |
 
 ## Python Validation
+
+Python code quality was ensured through adherence to PEP 8 guidelines using `flake8`. This tool was employed to check for compliance with Python's style guide and to identify potential errors in the codebase.
+
+### Process
+
+1. **Integration of `flake8`**:
+   - `flake8` was used to enforce PEP 8 style guidelines and detect potential issues within the Python code. This tool was integrated into the development workflow via GitPod, where it provided real-time feedback on code quality.
+
+2. **Running `flake8`**:
+   - The `flake8` tool was executed across all Python files in the project to identify any deviations from standard coding practices.
+   - It checked for common issues such as code style violations, indentation errors, and potential logical problems.
+
+3. **Issue Identification**:
+   - The `flake8` tool generated reports highlighting areas where the code did not meet PEP 8 standards or where potential errors were detected.
+   - Common issues identified included long lines, incorrect indentation, and unused imports.
+
+4. **Issue Resolution**:
+   - Detected issues were reviewed and corrected to ensure compliance with PEP 8 guidelines.
+   - Corrections were made to enhance code readability and maintainability.
 
 ## Lighthouse Testing
 

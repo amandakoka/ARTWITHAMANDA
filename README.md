@@ -456,6 +456,32 @@ The following features are consistently present on all website pages, ensuring a
   - **Similar Design to Home Page**: Utilizes the same high-quality image as the Home page, creating a consistent visual theme across the site.
   - **High-Quality Image**: Features a visually engaging image that complements the page design and maintains user engagement, mirroring the welcoming and inviting atmosphere of the Home page.
 
+## Contact Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Contact," providing clear context and helping users identify the purpose of the page immediately.
+
+### Main Content
+- **Introduction Section**:
+  - **Heading**: Features a prominent heading "Contact Us" styled as a display-4 class for a large, inviting appearance.
+  - **Subheading**: A brief, friendly message encouraging visitors to get in touch, enhancing user engagement.
+  - **Divider**: A horizontal rule (hr) to visually separate the heading from the form, adding to the clean layout.
+
+### Contact Form
+- **Form Description**:
+  - **Introductory Text**: A paragraph explaining the purpose of the form, inviting users to fill it out.
+  - **Responsive Layout**: Ensures the form is accessible and user-friendly on all devices.
+- **Form Structure**:
+  - **CSRF Protection**: Includes a CSRF token for secure form submissions, ensuring user data is protected.
+  - **Form Fields**: Utilizes crispy forms for a well-styled, intuitive user experience.
+  - **Submit Button**: A prominent "Send Message" button styled as a dark button with uppercase text, positioned for easy access.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the contact page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
+- **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the contact form, enhancing usability.
+
+
+
 # Technologies Used
 
 ### Languages

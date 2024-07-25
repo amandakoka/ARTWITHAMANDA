@@ -26,6 +26,7 @@ Art with Amanda is a full-stack e-commerce website that I developed as my final 
 6. [Credits](#credits) 
     -  [Media](#media)
     -  [Code](#code)
+7. [Potential Future Additions](#potential-future-additions)
 
 # User Experience 
 
@@ -594,7 +595,33 @@ The following features are consistently present on all website pages, ensuring a
 ### Consistent Design
 - **Visual Cohesion**: Ensures the success page aligns visually with the rest of the site, maintaining a clean and engaging design.
 
+## Account Page Features
 
+### Page Header
+- **Dynamic Title**: Displays the page title as "My Account," clearly indicating that users are viewing their account details.
+
+### Main Content
+
+#### Default Delivery Information
+- **Section Heading**: Features a heading "Default Delivery Information."
+- **Form**:
+  - **Purpose**: Allows users to update their default delivery information.
+  - **Form Fields**: Includes fields for updating delivery details, styled using the Crispy Forms library.
+  - **Update Button**: A button labeled "Update Information" for submitting the form and saving changes.
+
+#### Order History
+- **Section Heading**: Features a heading "Order History."
+- **Order History Table**:
+  - **Table Structure**:
+    - **Columns**:
+      - **Order Number**: Displays a clickable order number linking to the detailed order history.
+      - **Date**: Shows the date of the order.
+      - **Items**: Lists items in the order, including the product name and quantity.
+      - **Order Total**: Displays the total amount of the order.
+  - **Order Items List**: Each order shows a list of items, including their names and quantities.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the account page aligns visually with the rest of the site, using similar fonts, colors, and spacing for a cohesive look.
 
 # Technologies Used
 

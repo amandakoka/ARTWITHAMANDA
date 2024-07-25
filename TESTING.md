@@ -115,9 +115,9 @@ W3C [HTML Validator](https://validator.w3.org/) was be used to validate the HTML
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| static/css/base.css | Pass |  |
-| checkout/static/checkout/css/checkout.css |  | |
-| accounts/static/accounts/css/account.css |  |  |
+| static/css/base.css | Pass | [base.css](documentation/CSSval/cssval1.png) |
+| checkout/static/checkout/css/checkout.css | Pass | [checkout.css](documentation/CSSval/cssval2.png)|
+| accounts/static/accounts/css/account.css | Pass | [account.css](documentation/CSSval/cssval3.png) |
 
 ### JavaScript
 

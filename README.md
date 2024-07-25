@@ -500,6 +500,40 @@ The following features are consistently present on all website pages, ensuring a
 - **Visual Cohesion**: Ensures the contact success page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
 - **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the confirmation message, enhancing usability.
 
+## Bag Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Your Bag," clearly indicating that users are viewing their shopping cart.
+
+### Main Content
+- **Bag Overview**:
+  - **Heading**: Features a prominent heading "Your Bag" styled to be visually engaging and informative.
+  - **Empty State**: If the shopping bag is empty, a message is displayed to inform users that their bag is currently empty and prompt them to start shopping. This message is centered and styled to maintain user engagement.
+
+### Artworks in Bag
+- **Artworks Display**:
+  - **Item List**: Displays a list of artworks that have been added to the shopping bag.
+  - **Artwork Cards**: Each item in the bag is presented in a card format, including:
+    - **Image**: A thumbnail image of the artwork.
+    - **Title**: The name of the artwork.
+    - **Price**: The price of the artwork.
+    - **Quantity Selector**: Allows users to adjust the quantity of the artwork.
+    - **Remove Button**: A button to remove the item from the bag.
+
+### Bag Summary
+- **Summary Details**:
+  - **Subtotal**: Displays the subtotal amount for the items in the bag.
+  - **Total**: Shows the total amount including any applicable taxes or discounts.
+  - **Estimated Shipping**: Provides an estimate of shipping costs if applicable.
+
+### Actions
+- **Continue Shopping Button**: A button that navigates users back to the shop page, encouraging them to add more items to their bag.
+- **Checkout Button**: A prominent button that leads users to the checkout page to finalize their purchase. Styled as a dark button with uppercase text for easy visibility.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the bag page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
+- **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the shopping bag contents and actions, enhancing usability.
+
 
 
 # Technologies Used

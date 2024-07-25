@@ -480,6 +480,26 @@ The following features are consistently present on all website pages, ensuring a
 - **Visual Cohesion**: Ensures the contact page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
 - **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the contact form, enhancing usability.
 
+## Contact Success Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Contact Success," immediately informing users of the page's purpose.
+
+### Main Content
+- **Confirmation Message**:
+  - **Heading**: Features a prominent "Thank You!" heading styled as a display-4 class, creating a positive user experience.
+  - **Subheading**: A brief message confirming the successful submission of the contact form, adding to user reassurance.
+  - **Divider**: A horizontal rule (hr) to visually separate the heading from the body text, maintaining a clean design.
+
+### Follow-Up Information
+- **Next Steps**:
+  - **Message**: A paragraph informing users that their message has been successfully sent and that they will be contacted soon, providing a clear next step and enhancing user satisfaction.
+  - **Back to Contact Button**: A centered button labeled "Back to Contact Page" styled as a dark button with uppercase text, offering a seamless way for users to return to the contact form if needed.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the contact success page aligns visually with the rest of the site, using similar fonts, colors, and spacing.
+- **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the confirmation message, enhancing usability.
+
 
 
 # Technologies Used

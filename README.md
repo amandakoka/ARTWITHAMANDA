@@ -623,6 +623,32 @@ The following features are consistently present on all website pages, ensuring a
 ### Consistent Design
 - **Visual Cohesion**: Ensures the account page aligns visually with the rest of the site, using similar fonts, colors, and spacing for a cohesive look.
 
+## Add and Edit Product Page Features
+
+### Page Header
+- **Dynamic Title**: Displays the page title as "Product Management," immediately informing users of the page's purpose.
+- **Subtitle**: 
+  - **Add Artwork**: Displays a subtitle "Add Artwork" to indicate the function of adding new artwork.
+  - **Edit Artwork**: Displays a subtitle "Edit Artwork" to indicate the function of editing existing artwork.
+
+### Main Content
+- **Form Structure**:
+  - **Django Form**: Utilizes Django forms to handle the input fields for adding or editing artwork, ensuring all necessary fields are completed before submission.
+  - **Crispy Forms**: Implements the `crispy-forms` library to render form fields with Bootstrap styling, providing a clean and responsive design.
+  - **Image Upload**: Includes a file input field for uploading artwork images, with real-time feedback on the selected file.
+
+### Form Actions
+- **Add Artwork Button**: When adding artwork, displays a button labeled "Add Artwork" for submitting the form.
+- **Update Artwork Button**: When editing artwork, displays a button labeled "Update Artwork" for submitting the form.
+- **Cancel Button**: A button labeled "Cancel" that navigates users back to the artworks page without saving changes.
+
+### Consistent Design
+- **Visual Cohesion**: Ensures the add and edit product pages align visually with the rest of the site, using similar fonts, colors, and spacing.
+- **Clean Aesthetic**: Maintains a minimalistic design to keep the focus on the form fields and actions, enhancing usability.
+
+### Post-Load JavaScript
+- **Image File Name Display**: Includes a script that updates the file name text when a new image is selected for upload.
+
 # Technologies Used
 
 ### Languages

@@ -91,9 +91,61 @@ During deployment, the application failed to build correctly when pushing to Her
 
 ## HTML,CSS,JS Validation
 
+### HTML Validation
+
+W3C [HTML Validator](https://validator.w3.org/) was be used to validate the HTML on all pages of the site.
+
+| Page                  | Result | Evidence |
+| :--- | :--- | :---: |
+| Home Page             |        |          |
+| Shop Page             |        |          |
+| Artwork Detail Page   |        |          |
+| Gallery Page          |        |          |
+| Review Page           |        |          |
+| Contact Page          |        |          |
+| Contact Success Page  |        |          |
+| Bag Page              |        |          |
+| Checkout Page         |        |          |
+| Checkout Success Page |        |          |
+| Account Page          |        |          |
+
+### CSS
+
+[W3C](https://validator.w3.org/) was used to validate the CSS.
+
+| File | Result | Evidence |
+| :--- | :--- | :---: |
+| static/css/base.css |  |  |
+| checkout/static/checkout/css/checkout.css |  | |
+| accounts/static/accounts/css/account.css |  |  |
+
+### JavaScript
+
+[JS Hint](https://jshint.com/) was used to validate the JavaScript.
+
+| File | Result | Evidence |
+| :--- | :--- | :---: |
+| checkout/static/checkout/js/stripe-elements.js |  | |
+
 ## Python Validation
 
 ## Lighthouse Testing
+
+I used Googles Lighthouse testing to test the performance, accessibility, best practices and SEO of the site.
+
+| Page                  | Result |
+| :---: | :---: |
+| Home Page             |        |          
+| Shop Page             |        |          
+| Artwork Detail Page   |        |          
+| Gallery Page          |        |          
+| Review Page           |        |          
+| Contact Page          |        |          
+| Contact Success Page  |        |          
+| Bag Page              |        |          
+| Checkout Page         |        |          
+| Checkout Success Page |        |          
+| Account Page          |        |         
 
 
 ## User Stories Testing

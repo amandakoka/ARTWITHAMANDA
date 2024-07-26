@@ -134,37 +134,37 @@ User feedback played a crucial role in shaping the development of Art with Amand
 User feedback remains an important part of Art with Amanda's ongoing development and growth strategy. I will continue to actively seek suggestions and feedback from the audience throughout the development process, periodically asking for input on my Instagram and from friends and family. This approach ensures that the website evolves to meet the preferences and needs of its users, maintaining a user-centric approach to its development.
 
 ## User Stories
+
 | User Story ID | As a/an | I want to be able to ... | So that I can... |
-| :--- | :--- | :--- | :---|
-| **VIEWING & NAVIGATION** |
-| 1 | Shopper | Easily navigate the site | find artwork/information that I need. |
-| 2 | Shopper | Easily contact the artist | ask any questions about anything I'm interested in, like a commission. |
-| 3 | Shopper | Learn about the artist | gain insights into the artist's background and journey. |
-| 4 | Shopper | View a category/filter of artwork, e.g., originals/prints | find specific art items I am interested in without having to scroll through all artwork. |
-| 5 | Shopper | View more details on artwork | see descriptions, dimensions, material used, and sizing. |
-| 6 | Shopper | View my running total of purchases throughout my visit | make sure I don't overspend & can track whether I meet any site offers (e.g., free delivery). |
-| **REGISTRATION & USER ACCOUNTS** |
-| 7 | Shopper | Easily register for an account | have a personal account and view my profile. |
-| 8 | Shopper | Receive an email to confirm my registration | verify my account was created successfully. |
-| 9 | Shopper | Log in and out | access my personal account and keep my account information secure. |
-| 10 | Shopper | View a profile page | view my previous orders and key information. |
-| 11 | Shopper | Reset my password | recover access to my account. |
-| **SORTING & SEARCHING** |
-| 12 | Shopper | Sort the list of available artworks | easily identify the best-priced and categorically sorted artworks. |
-| 13 | Shopper | Sort a specific category of artworks | find the best-priced artwork in a specific category, or sort the artworks by name. |
-| 14 | Shopper | Easily see what I've searched for and the number of results | quickly decide whether the product I want is available. |
-| **PURCHASING & CHECKOUT** |
-| 15 | Shopper | Easily select size and quantity of artwork when purchasing it | ensure I don't select the wrong size or quantity. |
-| 16 | Shopper | View items in my bag to be purchased | see the total cost of my purchase and all items I will receive. |
-| 17 | Shopper | Adjust the quantity of individual items in my bag | easily make changes to my purchase before checkout. |
-| 18 | Shopper | Easily enter my payment information | check out quickly and with no problems. |
-| 19 | Shopper | Feel my personal and payment information is safe and secure | confidently provide the needed information to make a purchase. |
-| 20 | Shopper | View an order confirmation after checkout | verify that I haven't made any mistakes. |
-| 21 | Shopper | Receive an email confirmation after checking out | keep the confirmation of what I've purchased for my records. |
-| **ADMIN & STORE MANAGEMENT** |
-| 22 | Store Owner | Add artwork | add new art pieces to my store. |
-| 23 | Store Owner | Edit/update a product | change art piece prices, descriptions, images, and other criteria. |
-| 24 | Store Owner | Delete a product | remove items that are no longer for sale. |
+| :--- | :--- | :--- | :--- |
+| **Viewing & Navigation** |
+| 1 | Shopper | Easily navigate the site | Find artwork/information that I need. |
+| 2 | Shopper | Easily contact the artist | Ask any questions about anything I'm interested in, like a commission. |
+| 3 | Shopper | Learn about the artist | Gain insights into the artist's background and journey. |
+| 4 | Shopper | View artwork by category (e.g., Pencil, Paint) | Find specific art items I am interested in without having to scroll through all artwork. |
+| 5 | Shopper | View more details on artwork | See descriptions, dimensions, material used, and sizing. |
+| 6 | Shopper | View my running total of purchases throughout my visit | Make sure I don't overspend & can track whether I meet any site offers (e.g., free delivery). |
+| **Registration & User Accounts** |
+| 7 | Shopper | Easily register for an account | Have a personal account and view my profile. |
+| 8 | Shopper | Receive an email to confirm my registration | Verify my account was created successfully. |
+| 9 | Shopper | Log in and out | Access my personal account and keep my account information secure. |
+| 10 | Shopper | View a profile page | View my previous orders and key information. |
+| 11 | Shopper | Reset my password | Recover access to my account. |
+| **Sorting** |
+| 12 | Shopper | Sort the list of available artworks | Easily identify the best-priced and categorically sorted artworks. |
+| 13 | Shopper | Sort a specific category of artworks | Find the best-priced artwork in a specific category, or sort the artworks by name. |
+| **Purchasing & Checkout** |
+| 14 | Shopper | Easily select size and quantity of artwork when purchasing it | Ensure I don't select the wrong size or quantity. |
+| 15 | Shopper | View items in my bag to be purchased | See the total cost of my purchase and all items I will receive. |
+| 16 | Shopper | Adjust the quantity of individual items in my bag | Easily make changes to my purchase before checkout. |
+| 17 | Shopper | Easily enter my payment information | Check out quickly and with no problems. |
+| 18 | Shopper | Feel my personal and payment information is safe and secure | Confidently provide the needed information to make a purchase. |
+| 19 | Shopper | View an order confirmation after checkout | Verify that I haven't made any mistakes. |
+| 20 | Shopper | Receive an email confirmation after checking out | Keep the confirmation of what I've purchased for my records. |
+| **Admin & Store Management** |
+| 21 | Store Owner | Add artwork | Add new art pieces to my store. |
+| 22 | Store Owner | Edit/update a product | Change art piece prices, descriptions, images, and other criteria. |
+| 23 | Store Owner | Delete a product | Remove items that are no longer for sale. |
 
 ## Database schema 
 

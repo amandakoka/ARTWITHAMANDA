@@ -86,6 +86,48 @@ During deployment, the application failed to build correctly when pushing to Her
   ```plaintext
   python-3.10.14
 
+### **Remove Button Bug**
+
+**Issue with "Remove Me" Button on Shop Page:**
+
+- **Description**: The "Remove Me" button on the shop page does not remove the item from the cart.
+- **Steps to Reproduce**:
+  1. Add an item to the cart.
+  2. Navigate to the shop page.
+  3. Click the "Remove Me" button next to an item.
+- **Expected Result**: The item should be removed from the cart.
+- **Actual Result**: The item remains in the cart.
+- **Status**: Debugging the button's functionality and ensuring the cart is updated correctly upon item removal.
+
+**Troubleshooting Steps:**
+
+1. **Identify the Problem**:
+   - Verified that the "Remove Me" button was correctly linked to the `remove_from_bag` view function.
+
+2. **Check Button ID**:
+   - Noticed that the ID of the remove button was previously set to `item.artwork.artwork_id`, which was incorrect.
+
+3. **Update Button ID**:
+   - Changed the button ID to `item.artwork.id` to correctly reflect the item’s ID.
+
+4. **Add Debugging Statements**:
+   - Added print statements in the `remove_from_bag` view function to track the flow and verify data.
+   - Example print statement:
+     ```python
+     print(f"Attempting to remove artwork with ID: {artwork_id}")
+     ```
+
+5. **Verify URL Handling**:
+   - Set `DEBUG` to `True` in Django settings to see detailed error messages.
+   - Observed that the URL was incorrect. Adjusted the URL configuration by removing unnecessary parts.
+
+6. **Update and Test**:
+   - Modified the URL configuration to ensure the correct route was used for removing items.
+   - Successfully tested that the item was removed from the cart after the adjustment.
+
+**Resolution**: After updating the button ID and correcting the URL configuration, the "Remove Me" button functionality was restored, and items are now correctly removed from the cart.
+
+
 
 ## Known Bugs
 
@@ -97,16 +139,6 @@ During deployment, the application failed to build correctly when pushing to Her
 - **Expected Result**: The footer should be fixed at the bottom of the page.
 - **Actual Result**: The footer appears higher up, leaving an empty space below it.
 - **Status**: Currently investigating CSS and layout adjustments to ensure the footer remains at the bottom on all screen sizes.
-
-### "Remove Me" Button on Shop Page
-- **Description**: The "Remove Me" button on the shop page does not remove the item from the cart.
-- **Steps to Reproduce**: 
-  1. Add an item to the cart.
-  2. Navigate to the shop page.
-  3. Click the "Remove Me" button next to an item.
-- **Expected Result**: The item should be removed from the cart.
-- **Actual Result**: The item remains in the cart.
-- **Status**: Debugging the button's functionality and ensuring the cart is updated correctly upon item removal.
 
 ### 500 Server Error on Contact Form Submission
 - **Description**: Submitting the contact form results in a 500 Server Error, although the email is successfully sent.

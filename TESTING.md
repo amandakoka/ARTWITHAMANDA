@@ -127,6 +127,54 @@ During deployment, the application failed to build correctly when pushing to Her
 
 **Resolution**: After updating the button ID and correcting the URL configuration, the "Remove Me" button functionality was restored, and items are now correctly removed from the cart.
 
+### **500 Server Error on Contact Form Submission**
+
+**Issue with Contact Form Submission:**
+
+- **Description**: Submitting the contact form results in a 500 Server Error, despite the email being successfully sent.
+- **Steps to Reproduce**:
+  1. Fill out the contact form.
+  2. Submit the form.
+- **Expected Result**: A confirmation message should appear, indicating that the email has been sent successfully.
+- **Actual Result**: A 500 Server Error page is displayed, even though the email is sent.
+
+**Troubleshooting Steps:**
+
+1. **Identify the Problem**:
+   - Verified that the email is sent successfully but observed a 500 Server Error upon form submission.
+
+2. **Review Error Logs**:
+   - Checked server logs to pinpoint the cause of the 500 Server Error.
+
+3. **Inspect `contact` View Function**:
+   - Reviewed the `contact` view function for potential issues.
+   - Confirmed the function redirects to the `success` URL instead of `contact:success`.
+
+4. **Update URL Configuration**:
+   - Changed the redirect URL in the `contact` view function from `'contact:success'` to `'success'`.
+   - Updated `urls.py` to ensure the `success` route is correctly defined:
+     ```python
+     urlpatterns = [
+         path('', views.contact, name='contact'),
+         path('success/', views.success_view, name='success'),
+     ]
+     ```
+
+5. **Check Template Rendering**:
+   - Reviewed the `contact/success.html` template to ensure it does not contain errors that could cause a 500 error.
+
+6. **Update View Layout**:
+   - Changed the layout of the `success_view` function to ensure proper rendering and handling:
+     ```python
+     def success_view(request):
+         return render(request, 'contact/success.html')
+     ```
+
+7. **Test and Verify**:
+   - Re-tested the contact form submission to confirm that the 500 Server Error is resolved.
+   - Verified that the confirmation message is displayed correctly after submission.
+
+**Resolution**: By updating the redirect URL to `'success'` and changing the layout of the `success_view` function, the 500 Server Error was resolved. The contact form submission now correctly displays the confirmation message.
 
 
 ## Known Bugs
@@ -139,15 +187,6 @@ During deployment, the application failed to build correctly when pushing to Her
 - **Expected Result**: The footer should be fixed at the bottom of the page.
 - **Actual Result**: The footer appears higher up, leaving an empty space below it.
 - **Status**: Currently investigating CSS and layout adjustments to ensure the footer remains at the bottom on all screen sizes.
-
-### 500 Server Error on Contact Form Submission
-- **Description**: Submitting the contact form results in a 500 Server Error, although the email is successfully sent.
-- **Steps to Reproduce**: 
-  1. Fill out the contact form.
-  2. Submit the form.
-- **Expected Result**: A confirmation message should appear, indicating that the email has been sent.
-- **Actual Result**: A 500 Server Error page is displayed, despite the email being sent.
-- **Status**: Reviewing server logs and refining the error handling to prevent the 500 error from occurring.
 
 ### Ongoing Fixes
 I am actively working on fixing these issues and will provide updates on the progress. Each bug is being carefully reviewed, and solutions are being implemented and tested to ensure they are resolved. Please check back for updates on these issues.
@@ -229,11 +268,7 @@ I used Googles Lighthouse testing to test the performance, accessibility, best p
 | Contact Page          | ![Contact](documentation/Lighthouse/contactlighth.png)|          
 | Contact Success Page  | ![Contact Success](documentation/Lighthouse/contactsulighth.png)|          
 | Bag Page              | ![Bag](documentation/Lighthouse/baglighth.png)|          
-| Checkout Page         |        |          
-| Checkout Success Page |        |          
-| Account Page          |        |         
-
-
+      
 ## User Stories Testing
 
 | **User Story ID** | **Test Case ID** | **Description** | **Preconditions** | **Test Steps** | **Expected Result** | **Status** | **Comments** |

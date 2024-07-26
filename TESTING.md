@@ -89,6 +89,37 @@ During deployment, the application failed to build correctly when pushing to Her
 
 ## Known Bugs
 
+### Footer Display Issue on Mobile
+- **Description**: On mobile screens, the footer does not stick to the bottom of the home page, leaving a gap below it.
+- **Steps to Reproduce**: 
+  1. Open the home page on a mobile device or resize the browser to a mobile screen size.
+  2. Scroll to the bottom of the page.
+- **Expected Result**: The footer should be fixed at the bottom of the page.
+- **Actual Result**: The footer appears higher up, leaving an empty space below it.
+- **Status**: Currently investigating CSS and layout adjustments to ensure the footer remains at the bottom on all screen sizes.
+
+### "Remove Me" Button on Shop Page
+- **Description**: The "Remove Me" button on the shop page does not remove the item from the cart.
+- **Steps to Reproduce**: 
+  1. Add an item to the cart.
+  2. Navigate to the shop page.
+  3. Click the "Remove Me" button next to an item.
+- **Expected Result**: The item should be removed from the cart.
+- **Actual Result**: The item remains in the cart.
+- **Status**: Debugging the button's functionality and ensuring the cart is updated correctly upon item removal.
+
+### 500 Server Error on Contact Form Submission
+- **Description**: Submitting the contact form results in a 500 Server Error, although the email is successfully sent.
+- **Steps to Reproduce**: 
+  1. Fill out the contact form.
+  2. Submit the form.
+- **Expected Result**: A confirmation message should appear, indicating that the email has been sent.
+- **Actual Result**: A 500 Server Error page is displayed, despite the email being sent.
+- **Status**: Reviewing server logs and refining the error handling to prevent the 500 error from occurring.
+
+### Ongoing Fixes
+I am actively working on fixing these issues and will provide updates on the progress. Each bug is being carefully reviewed, and solutions are being implemented and tested to ensure they are resolved. Please check back for updates on these issues.
+
 ## HTML,CSS,JS Validation
 
 ### HTML Validation

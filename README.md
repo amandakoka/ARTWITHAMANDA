@@ -166,7 +166,103 @@ User feedback remains an important part of Art with Amanda's ongoing development
 | 22 | Store Owner | Edit/update a product | Change art piece prices, descriptions, images, and other criteria. |
 | 23 | Store Owner | Delete a product | Remove items that are no longer for sale. |
 
-## Database schema 
+## Database Schema
+
+### Overview
+
+The application manages an art gallery with features including user accounts, artwork management, orders, contact messages, and reviews. Below is a detailed description of the relational database schema and how the models interact with each other.
+
+### Relational Database Schema
+
+#### Models and Their Relationships
+
+1. **Category**
+   - **Purpose:** Organizes artworks into categories.
+   - **Fields:**
+     - `name` (CharField): Name of the category.
+   - **Relationships:**
+     - **Has Many `Artwork` Instances:** Each category can be associated with multiple artworks.
+
+2. **Artwork**
+   - **Purpose:** Represents individual pieces of art in the gallery.
+   - **Fields:**
+     - `name` (CharField): Name of the artwork.
+     - `description` (TextField): Description of the artwork.
+     - `price` (DecimalField): Price of the artwork.
+     - `category` (ForeignKey to `Category`): Links the artwork to its category.
+     - `image_url` (URLField): URL for the artwork's image.
+     - `image` (ImageField): Uploadable image file of the artwork.
+   - **Relationships:**
+     - **Belongs to a `Category`:** Each artwork is categorized under one category, but each category can encompass many artworks.
+     - **Appears in Multiple `OrderLineItem` Entries:** An artwork can be included in multiple order line items across different orders.
+     - **Has Many `Review` Entries:** Each artwork can receive multiple reviews from users.
+
+3. **Order**
+   - **Purpose:** Represents a purchase transaction made by a user.
+   - **Fields:**
+     - `order_number` (CharField): Unique identifier for the order.
+     - `user_account` (ForeignKey to `UserAccount`): Associates the order with a specific user account.
+     - `full_name` (CharField): Name of the person placing the order.
+     - `email` (EmailField): Email of the person placing the order.
+     - `phone_number` (CharField): Contact number of the person placing the order.
+     - `country` (CountryField): Country for delivery.
+     - `postcode` (CharField): Postal code for delivery.
+     - `town_or_city` (CharField): Town or city for delivery.
+     - `street_address1` (CharField): Primary street address for delivery.
+     - `street_address2` (CharField): Secondary street address for delivery.
+     - `county` (CharField): County for delivery.
+     - `date` (DateTimeField): Timestamp of when the order was placed.
+     - `delivery_cost` (DecimalField): Cost associated with delivery.
+     - `order_total` (DecimalField): Total cost of the order excluding delivery.
+     - `grand_total` (DecimalField): Total cost including delivery.
+   - **Relationships:**
+     - **Associated with a `UserAccount`:** Each order is linked to a specific user account. Each user can place multiple orders.
+     - **Contains Multiple `OrderLineItem` Entries:** An order can include several line items, each corresponding to different artworks.
+
+4. **OrderLineItem**
+   - **Purpose:** Details individual items within an order.
+   - **Fields:**
+     - `order` (ForeignKey to `Order`): Connects the line item to its parent order.
+     - `artwork` (ForeignKey to `Artwork`): Identifies the artwork included in the line item.
+     - `quantity` (IntegerField): Number of units of the artwork in the line item.
+     - `lineitem_total` (DecimalField): Total cost for the line item (price of artwork multiplied by quantity).
+   - **Relationships:**
+     - **Part of an `Order`:** Each line item is part of a single order, but each order can consist of multiple line items.
+     - **Refers to an `Artwork`:** Each line item specifies an artwork, and each artwork can be referenced in multiple line items.
+
+5. **ContactMessage**
+   - **Purpose:** Captures messages sent by users through a contact form.
+   - **Fields:**
+     - `name` (CharField): Name of the person sending the message.
+     - `email` (EmailField): Email address of the sender.
+     - `message` (TextField): Content of the message.
+     - `created_at` (DateTimeField): Timestamp of when the message was created.
+   - **Relationships:**
+     - **Standalone:** Contact messages do not have direct relationships with other models.
+
+6. **Review**
+   - **Purpose:** Allows users to leave feedback on artworks.
+   - **Fields:**
+     - `artwork` (ForeignKey to `Artwork`): Links the review to a specific artwork.
+     - `text` (TextField): Content of the review.
+   - **Relationships:**
+     - **Linked to an `Artwork`:** Each review is connected to one artwork. Each artwork can have multiple reviews.
+
+### Custom Models
+
+- **UserAccount:** Provides additional information related to a user's default delivery preferences.
+- **OrderLineItem:** Manages details of individual items within an order and their pricing.
+
+### Forms with Validation
+
+Custom forms are used to ensure data integrity and user input validation. For example, order forms validate all necessary fields before creating an order and its associated line items.
+
+### CRUD Functionality
+
+- **Create:** New records can be added using Django’s admin interface or custom forms.
+- **Read:** Records can be retrieved and displayed using Django's query capabilities.
+- **Update:** Existing records can be modified through the admin interface or custom forms.
+- **Delete:** Records can be removed using Django’s admin interface or custom views.
 
 ## Wireframes
 In the initial stages of designing Art with Amanda, I created rough sketches to visualize the layout and structure of the website. These sketches served as a blueprint for the final wireframes and helped shape the overall user experience. Below are the images of these sketches:
@@ -1036,5 +1132,3 @@ As I continue to develop my art and grow my audience, I’m excited about the po
 #### Customer Engagement
 - **Print Reviews**: Allow customers to leave reviews for print versions, helping future buyers make informed decisions.
 - **Social Media**: Promote your print offerings on social media platforms to reach a broader audience and generate interest.
-
-

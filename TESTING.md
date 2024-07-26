@@ -158,14 +158,14 @@ I used Googles Lighthouse testing to test the performance, accessibility, best p
 
 | Page                  | Result |
 | :---: | :---: |
-| Home Page             |        |          
-| Shop Page             |        |          
-| Artwork Detail Page   |        |          
-| Gallery Page          |        |          
-| Review Page           |        |          
-| Contact Page          |        |          
-| Contact Success Page  |        |          
-| Bag Page              |        |          
+| Home Page             | ![Homepage](documentation/Lighthouse/homelighth.png)|          
+| Shop Page             | ![Shop page](documentation/Lighthouse/shoplighth.png)|          
+| Artwork Detail Page   | ![Artwork](documentation/Lighthouse/artworkslighth.png)|          
+| Gallery Page          | ![Gallery](documentation/Lighthouse/gallerylighth.png)|          
+| Review Page           | ![Review](documentation/Lighthouse/reviewlighth.png)|          
+| Contact Page          | ![Contact](documentation/Lighthouse/contactlighth.png)|          
+| Contact Success Page  | ![Contact Success](documentation/Lighthouse/contactsulighth.png)|          
+| Bag Page              | ![Bag](documentation/Lighthouse/baglighth.png)|          
 | Checkout Page         |        |          
 | Checkout Success Page |        |          
 | Account Page          |        |         

@@ -63,7 +63,7 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info text-dark"><small>Update</small></a>
-                                        <a class="remove-item float-right text-dark" id="remove_{{ item.artwork.artwork_id }}"><small>Remove</small></a>
+                                        <a class="remove-item float-right text-dark" id="remove_{{ item.artwork_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.artwork.price | calc_subtotal:item.quantity }}</p>
@@ -116,7 +116,7 @@
 
     <script type="text/javascript">
         
-            $('.update-link').click(function(e) {
+        $('.update-link').click(function(e) {
                 e.preventDefault(); 
                 var form = $(this).closest('td').find('.update-form');
                 form.submit();

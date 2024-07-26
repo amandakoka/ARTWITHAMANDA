@@ -12,12 +12,13 @@ def contact(request):
             contact_message = form.save()
  
             send_mail(
-                f'Contact Form Submission from {contact_message.name}',
-                contact_message.message,
-                contact_message.email,
-                [settings.EMAIL_HOST_USER],
+                subject=f'Contact Form Submission from {contact_message.name}',
+                message=contact_message.message,
+                from_email=contact_message.email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
             )
-            return redirect('contact:success')
+            return redirect('success')
     else:
         form = ContactForm()
     return render(request, 'contact/contact.html', {'form': form})

@@ -2,7 +2,20 @@
 
 Art with Amanda is a full-stack e-commerce website that I developed as my final milestone project for the Level 5 Diploma in Web Development with Code Institute. As an artist, I built this platform using Django, Python, HTML, CSS, and JavaScript to showcase and sell my original artworks and prints. With Stripe integration for secure payments, the website provides a user-friendly interface where visitors can explore a diverse collection of my artwork, view detailed descriptions, and make purchases seamlessly. This project not only highlights my artistic endeavors but also demonstrates my proficiency in web development, combining my passion for art with modern technologies to create an engaging online gallery experience.
 
-[View website here](https://art-with-amanda-fc934063cf38.herokuapp.com/)
+[View website here](https://artwithamanda.onrender.com)
+
+## Deployment Migration
+
+This project was originally deployed using **Heroku** and **ElephantSQL**. Following the discontinuation of Heroku's free hosting and the closure of ElephantSQL, the application was migrated to a modern cloud deployment stack consisting of:
+
+- **Render** – Application hosting
+- **Supabase PostgreSQL** – Database
+- **AWS S3** – Media storage
+- **Stripe** – Payment processing
+
+The complete migration process, including the deployment steps, configuration changes, and issues encountered, is documented here:
+
+**[Deployment Migration Documentation](MIGRATION.md)**
 
 # Table of Contents
 

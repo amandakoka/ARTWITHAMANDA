@@ -30,16 +30,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = os.environ.get("DEVELOPMENT") == "True"
 
 ALLOWED_HOSTS = [
-
-    '8000-amandakoka-artwithamand-4bavm5xwij7.ws.codeinstitute-ide.net',
-    'art-with-amanda-fc934063cf38.herokuapp.com',
-    'localhost',
-    '127.0.0.1',
-
+    "localhost",
+    "127.0.0.1",
 ]
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition

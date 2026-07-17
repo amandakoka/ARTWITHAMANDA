@@ -17,7 +17,11 @@
             {% for artwork in artworks %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="{{ artwork.image.url }}" class="d-block w-100 w-md-75 w-lg-50" alt="{{ artwork.name }}">
+                    {% if artwork.image %}
+                        <img src="{{ artwork.image.url }}" class="d-block w-100 w-md-75 w-lg-50" alt="{{ artwork.name }}">
+                    {% else %}
+                        <img src="{% static 'images/no-image.png' %}" class="d-block w-100 w-md-75 w-lg-50" alt="No image available">
+                    {% endif %}
                 </div>
                 <div class="carousel-caption d-block d-md-block">
                     <h5>{{ artwork.name }}</h5>

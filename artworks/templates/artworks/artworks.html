@@ -49,8 +49,11 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-img-container">
-                        <img src="{{ artwork.image.url }}" class="card-img-top img-fluid" alt="{{ artwork.name }}">
-                    </div>
+                        {% if artwork.image %}
+                            <img src="{{ artwork.image.url }}" class="card-img-top img-fluid" alt="{{ artwork.name }}">
+                        {% else %}
+                            <p class="text-center my-3">No image available</p>
+                        {% endif %}                    </div>
                     <div class="card-body d-flex flex-column">
                         <p class="card-title">{{ artwork.name }}</p>
                         <div class="mt-auto">

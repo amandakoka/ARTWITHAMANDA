@@ -92,6 +92,22 @@ Steps completed:
 - Updated Django to use the new `DATABASE_URL`.
 - Applied database migrations.
 - Verified the application connected successfully.
+- Reviewed Supabase database security configuration after migration.
+
+## Securing Supabase Database Access
+
+After migrating the database to Supabase PostgreSQL, Supabase Security Advisor reported that the Django tables were exposed through the Supabase Data API without Row Level Security (RLS).
+
+The application does not use the Supabase Data API. Django connects directly to the PostgreSQL database using the server-side `DATABASE_URL`.
+
+To reduce database exposure I:
+
+- Disabled Data API access for all Django tables.
+- Disabled automatic exposure of newly created tables.
+- Kept database access server-side through Django.
+- Verified that the application, authentication and Django administration interface continued to function correctly after the changes.
+
+This prevents application tables from being unnecessarily accessible through the Supabase Data API while preserving Django's direct PostgreSQL connection.
 
 ## Deploying to Render
 
